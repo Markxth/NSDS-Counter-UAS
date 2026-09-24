@@ -46,7 +46,7 @@ class Control:
     
     ###################################################
 
-    # NOTE: to access kp, ki, or kd, you still use kp ki and kd outside the class. IN THE CLASS use __kp, aka kp WITH the doubld underscore, else it will run into an error.
+    # NOTE: to access kp, ki, or kd, you still use kp ki and kd outside the class. IN THE CLASS use __kp, aka kp WITH the double underscore, else it will run into an error.
 
     def PID(self, error):
         """
