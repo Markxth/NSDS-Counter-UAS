@@ -1,5 +1,6 @@
 from enum import Enum
-
+import math
+import numpy as np
 # NOTE: these need to be moved to central utils files/folder
 
 C_SPEED_OF_LIGHT = 299_792_458
@@ -64,11 +65,32 @@ class Guidance:
     generates guidance commands for the control engine from the lead angle and current state.
     """
 
-    def __init__(self):
+    def __init__(self, n=3.0):
         """Initialize class members.
         """
+        self.N = N
 
         pass
+    #Proportional Navigation
+    def compute_acceleration(self,elim_pos,elim_vel,target_pos, target_vel):
+        """
+        target_pos = np.array(fusion_output.position)
+        target_vel = np.array(fusion_output.velocity
+        elim_pos = np.array(nav_output.position)
+        elim_vel = np.array(nav_output.velocity)
+        """  
+        R = target_pos - elim_pos
+        r = np.linalg.norm(R)
+        los = R / r
+
+        Vrel = target_vel - elim_vel
+        Vc = -np.dot(los, Vrel)
+
+        omega = np.cross(R, Vrel) / (r**2)
+
+        a_cmd = self.N * Vc * np.cross(omega, los)
+        return a_cmd)
+    
 
     ###################################################
 
@@ -79,11 +101,17 @@ class Guidance:
     def calc_lead_angle(elimination_method: EliminationMethod) -> float: #, target_package: TargetPackage) -> float:
         """Calculate the lead angle from a target's position and elimination method parameters.
         Returns the lead angle (λ).
-        
+        projectile_speed
+        """
+
+
+        """
         Keyword Args:
             elimination_method -- the elimination method that calculations should use
             NOTE: target_package will desscribe the target volume that should be aimed at, and may contain information like the bounding volume
             of the target, the RAE coordinates of the target, and the target speed
         """
 
+    
         pass
+
