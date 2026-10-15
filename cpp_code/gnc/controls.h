@@ -27,6 +27,7 @@ class ControlEngine {
   ControlEngine(double kp, double ki, double kd, double integral = 0,
                 double prev_error = 0, double prev_time = 0);
   ControlEngine(const ControlEngine&) = delete;
+  ~ControlEngine() = default;
   ControlEngine& operator=(const ControlEngine&) = delete;
 
   [[nodiscard]] double get_kp() const noexcept;
@@ -45,7 +46,7 @@ class ControlEngine {
    * @param error the instantaneous error, in radians of turret deflection.
    * @return the correction signal for the actuator.
    */
-  double PID(double error) noexcept;
+  [[nodiscard]] double PID(double error) noexcept;
 
  private:
   double kp_;

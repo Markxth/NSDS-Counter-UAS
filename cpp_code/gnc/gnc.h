@@ -22,8 +22,9 @@ namespace gnc {
  */
 class GNCEngine {
   public:
-    GNCEngine();
+    GNCEngine() = default;
     GNCEngine(const GNCEngine&) = delete;
+    ~GNCEngine() = default;
     GNCEngine& operator=(const GNCEngine&) = delete;
 
     /**

@@ -13,8 +13,9 @@ namespace gnc {
   */
 class NavigationEngine {
   public:
-    NavigationEngine();
+    NavigationEngine() = default;
     NavigationEngine(const NavigationEngine&) = delete;
+    ~NavigationEngine() = default;
     NavigationEngine& operator=(const NavigationEngine&) = delete;
 };
 
