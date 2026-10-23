@@ -118,8 +118,7 @@ class Vector {
      * @param other The right-hand vector to compute the cross product with.
      * @return A vector orthogonal to the two given vectors.
      */
-    template <typename U = T>
-    std::enable_if_t<N == 3, Vector<T, 3>> Cross(const Vector<T, 3>& other) const noexcept;
+    Vector<T, 3> Cross(const Vector<T, 3>& other) const noexcept requires(N == 3);
 
     /**
     * @brief Computes the magnitude of the vector.
@@ -252,9 +251,7 @@ T Vector<T, N>::Dot(const Vector<T, N>& target) const noexcept {
 }
 
 template <typename T, std::size_t N>
-template <typename U>
-std::enable_if_t<N == 3, Vector<T, 3>>
-Vector<T, N>::Cross(const Vector<T, 3>& other) const noexcept {
+Vector<T, 3> Vector<T, N>::Cross(const Vector<T, 3>& other) const noexcept requires(N == 3) {
   return Vector<T, 3>{
     Data[1] * other[2] - Data[2] * other[1],
     Data[2] * other[0] - Data[0] * other[2],

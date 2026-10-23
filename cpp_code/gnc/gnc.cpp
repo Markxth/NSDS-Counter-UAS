@@ -1,5 +1,5 @@
 // Copyright [2026] Purdue National Security and Defense Society
-#include "utility/datatypes/target_package.h"
+#include "utility/datatypes/TargetPackage.h"
 
 #include "gnc/gnc.h"
 

@@ -3,8 +3,6 @@
 
 namespace gnc {
 
-NavigationEngine::NavigationEngine() {}
-
 util::math::Vector2d NavigationEngine::get_current_statevector() const noexcept {
   util::math::Vector2d current_statevector;
 

@@ -1,12 +1,18 @@
 cmake_minimum_required(VERSION 3.15)
+project(NSDS_CUAS LANGUAGES CXX)
 
-project(cuas)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_CXX_STANDARD 17)
+add_subdirectory(utility)
+add_subdirectory(gnc)
+add_subdirectory(lidar)
 
-find_package(OpenCV REQUIRED)
+add_executable(NSDS_CUAS sentry.cpp)
 
-add_executable(app comp_vis.cpp)
-add_executable(app lidar.cpp)
-
-target_link_libraries(app PRIVATE ${OpenCV_LIBS})
+target_link_libraries(NSDS_CUAS 
+	PRIVATE 
+		util
+		gnc
+		lidar
+)

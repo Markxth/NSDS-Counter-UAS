@@ -56,7 +56,7 @@ class ControlEngine {
    * @param target_statevector_xyz The absolute xyz statevector to aim at.
    * @param current_statevector_ae The absolute ae statevector to aim at.
    */
-  void aim_at_target(const util::math::Vector3d& target_statevector_xyz, const util::math::Vector2d current_statevector_ae) noexcept;
+  void aim_at_target(const util::math::Vector3d& target_statevector_xyz, const util::math::Vector2d& current_statevector_ae) noexcept;
 
  private:
   double kp_;

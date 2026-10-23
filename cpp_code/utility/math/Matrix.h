@@ -8,27 +8,9 @@
 #include <iostream>
 #include <utility>
 
-#include "utility/math/Vector.hpp"
+#include "utility/math/Vector.h"
 
 namespace util::math {
-
-/**
- * @brief Inserts the formatted data of a matrix into an ostream.
- * @param os The ostream to insert the formatted matrix data into.
- * @param mat The matrix to pull the data from.
- * @return A reference to the ostream with the matrix data inserted.
- */
-template <typename T, std::size_t N, std::size_t M>
-std::ostream& operator<<(std::ostream& os, const ame::Matrix<T, N, M> mat) {
-  os << N << "x" << M << "\:" << std::endl;
-  for (std::size_t i = 0; i < N; i++) {
-    for (std::size_t j = 0; j < M; j++) {
-      os << mat(i, j) << " ";
-    }
-    os << std::endl;
-  }
-  return os;
-}
 
 /**
  * @class Matrix
@@ -54,7 +36,7 @@ class alignas(16) Matrix {
      * @throws std::runtime_error If values.size != N * M.
      */
     explicit Matrix(std::initializer_list<T> values);
-    ~Vector() = default;
+    ~Matrix() = default;
 
     /**
      * @brief Returns a non-const reference to the element at the given indices.
@@ -155,7 +137,7 @@ class alignas(16) Matrix {
      * @brief Returns a square identity matrix of the given size.
      * @return A square identity matrix.
      */
-    [[nodiscard]] static Matrix<T, N, M> Identity() requires(N == M) noexcept;
+    [[nodiscard]] static Matrix<T, N, M> Identity() noexcept requires(N == M);
 
     /**
      * @brief Returns the transpose of the given matrix.
@@ -355,7 +337,7 @@ Matrix<T, N, M>& Matrix<T, N, M>::operator/=(T& divisor) noexcept {
 }
 
 template <typename T, std::size_t N, std::size_t M>
-Matrix<T, N, M> Matrix<T, N, M>::Identity() requires(N == M) noexcept {
+Matrix<T, N, M> Matrix<T, N, M>::Identity() noexcept requires(N == M) {
   Matrix<T, N, N> identity;
   for (std::size_t i = 0; i < N; i++) {
     identity(i, i) = T{ 1 };
@@ -448,6 +430,24 @@ Matrix<T, N, M + P> Matrix<T, N, M>::Augment(const Matrix<T, N, P>& target) cons
     }
   }
   return augment;
+}
+
+/**
+ * @brief Inserts the formatted data of a matrix into an ostream.
+ * @param os The ostream to insert the formatted matrix data into.
+ * @param mat The matrix to pull the data from.
+ * @return A reference to the ostream with the matrix data inserted.
+ */
+template <typename T, std::size_t N, std::size_t M>
+std::ostream& operator<<(std::ostream& os, const Matrix<T, N, M> mat) {
+    os << N << "x" << M << ":" << std::endl;
+    for (std::size_t i = 0; i < N; i++) {
+        for (std::size_t j = 0; j < M; j++) {
+            os << mat(i, j) << " ";
+        }
+        os << std::endl;
+    }
+    return os;
 }
 
 }  // namespace util::math

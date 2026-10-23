@@ -18,13 +18,13 @@ namespace util::datatypes {
  * camera.
  */
 struct TargetPackage {
-  std::size_t target_id;
-  double time;
-  Vector3d rotated_position_xyz;
-  Vector3d rotated_velocity_xyz;
-  double measurement_uncertainty;
-  double target_confidence;
-}
+	std::size_t target_id;
+	double time;
+	util::math::Vector3d rotated_position_xyz;
+	util::math::Vector3d rotated_velocity_xyz;
+	double measurement_uncertainty;
+	double target_confidence;
+};
 
 }  // namespace util::datatypes
 

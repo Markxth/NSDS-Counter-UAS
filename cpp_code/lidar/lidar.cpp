@@ -1,6 +1,6 @@
-#include "lidar.h"
+// Copyright [2026] Purdue National Security and Defense Society
+#include "lidar/lidar.h"
 
-lidar::LidarEngine::LidarEngine()
-{
+namespace lidar {
 
-}
+}  // namespace lidar
