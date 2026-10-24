@@ -56,7 +56,7 @@ double ControlEngine::PID(const double error) noexcept {
   return proportional_term + integral_term + derivative_term;
 }
 
-void ControlEngine::aim_at_target(const util::math::Vector3d& target_statevector_xyz, const util::math::Vector2d& current_statevector_ae) noexcept {
+void ControlEngine::aim_at_desired_statevector(const util::math::Vector2d& current_statevector_ae, const util::math::Vector2d& desired_statevector_ae) noexcept {
   // Determine necessary commands
 
   // Issue commands

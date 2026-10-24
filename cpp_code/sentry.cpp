@@ -7,8 +7,7 @@
 #include "utility/datatypes/TargetPackage.h"
 #include "utility/math/Math.h"
 
-int main()
-{
+int main() {
   std::cout << "Hello, Sentry!" << std::endl;
 
   // TOOD(LeoZhang): enforce MISRA and Google CPP Style on cv.cpp, then include here

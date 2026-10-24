@@ -8,11 +8,11 @@
 namespace gnc::heuristics {
 
 double target_distance(const util::datatypes::TargetPackage& target) {
-	return target.rotated_position_xyz.Magnitude();
+	return target.absolute_position_xyz.Magnitude();
 }
 
 double target_velocity(const util::datatypes::TargetPackage& target) {
-	return target.rotated_velocity_xyz.Magnitude();
+	return target.absolute_velocity_xyz.Magnitude();
 }
 
 double target_confidence(const util::datatypes::TargetPackage& target) {

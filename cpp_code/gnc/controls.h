@@ -52,11 +52,11 @@ class ControlEngine {
   [[nodiscard]] double PID(double error) noexcept;
 
   /**
-   * @brief Aims the sentry at the target statevector given the current statevector of the sentry.
-   * @param target_statevector_xyz The absolute xyz statevector to aim at.
-   * @param current_statevector_ae The absolute ae statevector to aim at.
+   * @brief Aims the sentry at the target statevector given the current state vector of the sentry.
+   * @param current_statevector_ae The absolute AE statevector the sentry is currently aiming at.
+   * @param desired_statevector_ae The absolute AE statevector to aim it.
    */
-  void aim_at_target(const util::math::Vector3d& target_statevector_xyz, const util::math::Vector2d& current_statevector_ae) noexcept;
+  void aim_at_desired_statevector(const util::math::Vector2d& current_statevector_ae, const util::math::Vector2d& desired_statevector_ae) noexcept;
 
  private:
   double kp_;

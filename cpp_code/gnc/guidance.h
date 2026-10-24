@@ -34,11 +34,12 @@ class GuidanceEngine {
     [[nodiscard]] heuristics::TargetPriorityQueue determine_target_priorities(const std::vector<util::datatypes::TargetPackage>& target_packages) const noexcept;
 
     /**
-     * @brief Guidance engine entry point. Receives a list of target packages and determines which to aim at and applies a ballistic lead offset.
+     * @brief Guidance engine entry and exit point. Receives a list of target packages and the current statevector of the sentry and determines
+     * a desired aim statevector.
      * @param target_packages A vector of target packages for processing.
-     * @return The absolute sentry target statevector to aim at.
+     * @return The AE statevector that the sentry should aim at.
      */
-    [[nodiscard]] util::math::Vector3d determine_target_statevector(const std::vector<util::datatypes::TargetPackage>& target_packages) const noexcept;
+    [[nodiscard]] util::math::Vector2d determine_desired_statevector(const std::vector<util::datatypes::TargetPackage>& target_packages) const noexcept;
 
     /**
      * @brief Sets the heuristic ruleset used by the targeting system.
@@ -55,6 +56,14 @@ class GuidanceEngine {
      * @return The weighted output of the weighted heuristic function.
      */
     [[nodiscard]] double apply_targeting_heuristic(const util::datatypes::TargetPackage& target_package) const noexcept;
+
+    /**
+     * @brief Calculates the absolute AE rotation needed to track a moving target.
+     * @param target_package The target package to calculate aim for.
+     * @param dt_s The capture time interval in seconds.
+     * @return The aim statevector in AE coordinates.
+     */
+    [[nodiscard]] util::math::Vector2d calculate_aim_statevector(const util::datatypes::TargetPackage& target_package, const double dt_s) const noexcept;
 };
 
 }  // namespace gnc

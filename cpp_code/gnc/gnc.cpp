@@ -16,9 +16,10 @@ GNCEngine::GNCEngine()
 }
 
 void GNCEngine::receive_target_packages(const std::vector<TargetPackage>& target_packages) noexcept {
-  util::math::Vector3d target_statevector_xyz = guidance_engine.determine_target_statevector(target_packages);
   util::math::Vector2d current_statevector_ae = navigation_engine.get_current_statevector();
-  control_engine.aim_at_target(target_statevector_xyz, current_statevector_ae);
+  util::math::Vector2d desired_statevector_ae = guidance_engine.determine_desired_statevector(target_packages);
+
+  control_engine.aim_at_desired_statevector(current_statevector_ae, desired_statevector_ae);
 }
 
 }  // namespace gnc

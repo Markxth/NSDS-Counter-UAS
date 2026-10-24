@@ -20,8 +20,8 @@ namespace util::datatypes {
 struct TargetPackage {
 	std::size_t target_id;
 	double time;
-	util::math::Vector3d rotated_position_xyz;
-	util::math::Vector3d rotated_velocity_xyz;
+	util::math::Vector3d absolute_position_xyz;
+	util::math::Vector3d absolute_velocity_xyz;
 	double measurement_uncertainty;
 	double target_confidence;
 };
