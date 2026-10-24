@@ -1,14 +1,17 @@
+// Copyright [2026] Purdue National Security and Defense Society
 #ifndef NSDS_COUNTER_UAS_CPP_CODE_GNC_GNC_H_
 #define NSDS_COUNTER_UAS_CPP_CODE_GNC_GNC_H_
 
 #include <vector>
 
-#include "controls.h"
-#include "guidance.h"
-#include "navigation.h"
+namespace util::datatypes {
+struct TargetPackage;
+}
 
-// TODO: forward until a decision is reached about how to actually handle this
-class TargetPackage;
+#include "gnc/controls.h"
+#include "gnc/guidance.h"
+#include "gnc/HeuristicConfigLoader.h"
+#include "gnc/navigation.h"
 
 namespace gnc {
 
@@ -24,15 +27,18 @@ class GNCEngine {
   public:
     GNCEngine();
     GNCEngine(const GNCEngine&) = delete;
+    ~GNCEngine() = default;
     GNCEngine& operator=(const GNCEngine&) = delete;
 
     /**
     * @brief Public interface for delivering target packages to the GNC engine.
     * @param target_packages a vector of target packages for processing.
     */
-    void receive_target_packages(const std::vector<TargetPackage> target_packages) noexcept;
+    void receive_target_packages(const std::vector<util::datatypes::TargetPackage>& target_packages) noexcept;
 
   private:
+    heuristics::HeuristicConfigLoader heuristic_config_loader;
+
     GuidanceEngine guidance_engine;
     NavigationEngine navigation_engine;
     ControlEngine control_engine;

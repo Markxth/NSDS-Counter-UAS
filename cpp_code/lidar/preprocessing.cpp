@@ -1,6 +1,6 @@
-#include "preprocessing.h"
+// Copyright [2026] Purdue National Security and Defense Society
+#include "lidar/preprocessing.h"
 
-lidar::PreprocessingEngine::PreprocessingEngine()
-{
+namespace lidar {
 
-}
+}  // namespace lidar

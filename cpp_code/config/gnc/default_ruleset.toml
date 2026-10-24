@@ -1,0 +1,11 @@
+[[rules]]
+id = "target_distance"
+weight = 1.0
+
+[[rules]]
+id = "target_velocity"
+weight = 0.25
+
+[[rules]]
+id = "target_confidence"
+weight = 4.0

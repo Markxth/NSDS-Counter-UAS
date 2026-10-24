@@ -1,5 +1,8 @@
+// Copyright [2026] Purdue National Security and Defense Society
 #ifndef NSDS_COUNTER_UAS_CPP_CODE_GNC_CONTROLS_H_
 #define NSDS_COUNTER_UAS_CPP_CODE_GNC_CONTROLS_H_
+
+#include "utility/math/Math.h"
 
 namespace gnc {
 
@@ -27,6 +30,7 @@ class ControlEngine {
   ControlEngine(double kp, double ki, double kd, double integral = 0,
                 double prev_error = 0, double prev_time = 0);
   ControlEngine(const ControlEngine&) = delete;
+  ~ControlEngine() = default;
   ControlEngine& operator=(const ControlEngine&) = delete;
 
   [[nodiscard]] double get_kp() const noexcept;
@@ -45,7 +49,14 @@ class ControlEngine {
    * @param error the instantaneous error, in radians of turret deflection.
    * @return the correction signal for the actuator.
    */
-  double PID(double error) noexcept;
+  [[nodiscard]] double PID(double error) noexcept;
+
+  /**
+   * @brief Aims the sentry at the target statevector given the current statevector of the sentry.
+   * @param target_statevector_xyz The absolute xyz statevector to aim at.
+   * @param current_statevector_ae The absolute ae statevector to aim at.
+   */
+  void aim_at_target(const util::math::Vector3d& target_statevector_xyz, const util::math::Vector2d& current_statevector_ae) noexcept;
 
  private:
   double kp_;

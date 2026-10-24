@@ -1,8 +1,10 @@
-#include "controls.h"
-
+// Copyright [2026] Purdue National Security and Defense Society
 #include <chrono>
 
+#include "gnc/controls.h"
+
 namespace gnc {
+
 namespace {
 
 // Seconds from a monotonic origin, the counterpart of Python's
@@ -52,6 +54,12 @@ double ControlEngine::PID(const double error) noexcept {
   prev_error_ = error;
 
   return proportional_term + integral_term + derivative_term;
+}
+
+void ControlEngine::aim_at_target(const util::math::Vector3d& target_statevector_xyz, const util::math::Vector2d& current_statevector_ae) noexcept {
+  // Determine necessary commands
+
+  // Issue commands
 }
 
 }  // namespace gnc
