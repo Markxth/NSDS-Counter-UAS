@@ -4,6 +4,7 @@ project(NSDS_CUAS LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_subdirectory(ext)
 add_subdirectory(utility)
 add_subdirectory(gnc)
 add_subdirectory(lidar)
@@ -15,4 +16,9 @@ target_link_libraries(NSDS_CUAS
 		util
 		gnc
 		lidar
+)
+
+file(
+	COPY "${CMAKE_SOURCE_DIR}/config"
+	DESTINATION "${CMAKE_BINARY_DIR}"
 )

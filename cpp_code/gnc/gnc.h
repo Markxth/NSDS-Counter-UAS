@@ -10,6 +10,7 @@ struct TargetPackage;
 
 #include "gnc/controls.h"
 #include "gnc/guidance.h"
+#include "gnc/HeuristicConfigLoader.h"
 #include "gnc/navigation.h"
 
 namespace gnc {
@@ -36,6 +37,8 @@ class GNCEngine {
     void receive_target_packages(const std::vector<util::datatypes::TargetPackage>& target_packages) noexcept;
 
   private:
+    heuristics::HeuristicConfigLoader heuristic_config_loader;
+
     GuidanceEngine guidance_engine;
     NavigationEngine navigation_engine;
     ControlEngine control_engine;

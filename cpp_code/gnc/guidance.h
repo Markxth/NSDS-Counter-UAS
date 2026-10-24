@@ -4,12 +4,10 @@
 
 #include <vector>
 
+#include "utility/datatypes/TargetPackage.h"
 #include "utility/math/Math.h"
 
-// Forward Declarations
-namespace util::datatypes {
-struct TargetPackage;
-}
+#include "gnc/Heuristic.h"
 
 namespace gnc {
 
@@ -29,11 +27,34 @@ class GuidanceEngine {
     GuidanceEngine& operator=(const GuidanceEngine&) = delete;
 
     /**
+     * @brief Applies a weighted heuristic to determine the priority of each target in the provided list of target packages.
+     * @param target_packages A vector of target packages to sort by priority.
+     * @return A priority queue of targets.
+     */
+    [[nodiscard]] heuristics::TargetPriorityQueue determine_target_priorities(const std::vector<util::datatypes::TargetPackage>& target_packages) const noexcept;
+
+    /**
      * @brief Guidance engine entry point. Receives a list of target packages and determines which to aim at and applies a ballistic lead offset.
-     * @param target_packages a vector of target packages for processing.
+     * @param target_packages A vector of target packages for processing.
      * @return The absolute sentry target statevector to aim at.
      */
     [[nodiscard]] util::math::Vector3d determine_target_statevector(const std::vector<util::datatypes::TargetPackage>& target_packages) const noexcept;
+
+    /**
+     * @brief Sets the heuristic ruleset used by the targeting system.
+     * @param rules The heuristic ruleset to use for targeting.
+     */
+    void set_targeting_heuristic_ruleset(heuristics::HeuristicRuleset ruleset) noexcept;
+
+  private:
+    heuristics::HeuristicRuleset targeting_heuristic_rules;
+
+    /**
+     * @brief Applies the active heuristic rules to the given target package. Returns 0 and warns if there are no rules.
+     * @param target_package The target package to apply the rules to.
+     * @return The weighted output of the weighted heuristic function.
+     */
+    [[nodiscard]] double apply_targeting_heuristic(const util::datatypes::TargetPackage& target_package) const noexcept;
 };
 
 }  // namespace gnc

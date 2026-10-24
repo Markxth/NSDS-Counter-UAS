@@ -5,6 +5,12 @@ add_library(gnc STATIC
 	gnc.h
 	guidance.cpp
 	guidance.h
+	Heuristic.h
+	HeuristicConfigLoader.cpp
+	HeuristicConfigLoader.h
+	HeuristicRuleRegistry.cpp
+	HeuristicRuleRegistry.h
+	HeuristicRules.cpp
 	navigation.cpp
 	navigation.h
 )
