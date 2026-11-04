@@ -1,0 +1,332 @@
+\doxysection{Matrix.\+h}
+\hypertarget{_matrix_8h_source}{}\label{_matrix_8h_source}\index{cpp\_code/utility/math/Matrix.h@{cpp\_code/utility/math/Matrix.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_UTILITY\_MATH\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_UTILITY\_MATH\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <initializer\_list>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}utility/math/Vector.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }util::math\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\textcolor{keyword}{alignas}(16)\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}\ \{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a989551aaad54cd83602f94985f0cd5b4}{Matrix}}(\textcolor{keyword}{const}\ T\&\ value);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a28d523ee5ba14ff7635ecee17eb8fd15}{Matrix}}(std::initializer\_list<T>\ values);}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{\string~Matrix}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \ \ \ \ [[nodiscard]]\ T\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9b40640097aa6e5e35d0802d9202cdc3}{operator()}}(std::size\_t\ n,\ std::size\_t\ m);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ T\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a7305a054bf00be5e479c5bab7a2d499b}{operator()}}(std::size\_t\ n,\ std::size\_t\ m)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ M,\ N>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab3c90983527a017a0feedc1e89bde9c5}{as\_column\_major}}()\ const\ noexcept;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\ operator+(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ addend)\ const\ noexcept;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\ operator-\/(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ subtrahend)\ const\ noexcept;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ template\ <std::\textcolor{keywordtype}{size\_t}\ P>}
+\DoxyCodeLine{00085\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ P>\ operator*(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ M,\ P>\&\ multiplicand)\ const\ noexcept;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector}}<T,\ N>\ operator*(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector}}<T,\ M>\&\ multiplicand)\ const\ noexcept;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\ operator*(const\ T\&\ multiplicand)\ const\ noexcept;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\ operator/(T\&\ divisor)\ const\ noexcept;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ operator+=(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ addend)\ noexcept;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00120\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ operator-\/=(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ subtrahend)\ noexcept;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ operator*=(T\&\ multiplicand)\ noexcept;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00134\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\&\ operator/=(T\&\ divisor)\ noexcept;}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00140\ \ \ \ \ [[nodiscard]]\ static\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aa9d96237ad8427893accf3c169f9cedf}{Identity}}()\ noexcept\ requires(N\ ==\ M);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ M,\ N>\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aeefe40bf9190ee62d1ee99c5ac2bdab8}{Transpose}}()\ const\ noexcept;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ \ \ \ \ [[nodiscard]]\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M>\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a486e850043c0f65cb21836f7d303b52b}{Inverse}}()\ const\ requires(N\ ==\ M);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00158\ \ \ \ \ [[nodiscard]]\ T\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a636bf55dcdf24e57c4a9c9b576356d22}{Determinant}}()\ const\ noexcept\ requires(N\ ==\ M);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00165\ \ \ \ \ template\ <std::\textcolor{keywordtype}{size\_t}\ P>}
+\DoxyCodeLine{00166\ \ \ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ M\ +\ P>\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9f272c5cfb04fdf294bd59422583164f}{Augment}}(const\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}<T,\ N,\ P>\&\ target)\ const\ noexcept;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ protected:}
+\DoxyCodeLine{00175\ \ \ \ \ T\&\ operator[](const\ std::\textcolor{keywordtype}{size\_t}\ i)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ 0\ ||\ i\ >\ M\ *\ N)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ std::runtime\_error(\textcolor{stringliteral}{"{}AME:\ Index\ Out\ of\ Bounds."{}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Data[i];}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keyword}{const}\ T\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a3b4231688bbe6783f83d8eecda3ad7cc}{operator[]}}(\textcolor{keyword}{const}\ std::size\_t\ i)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ 0\ ||\ i\ >\ M\ *\ N)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ std::runtime\_error(\textcolor{stringliteral}{"{}AME:\ Index\ Out\ of\ Bounds."{}});}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Data[i];}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00192\ \ \ \ \ T\ Data[N\ *\ M];}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keyword}{constexpr}\ std::size\_t\ Index(std::size\_t\ n,\ std::size\_t\ m)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ n\ *\ M\ +\ m;\ \}}
+\DoxyCodeLine{00201\ \};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00204\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>::Matrix}}()\ \{}
+\DoxyCodeLine{00205\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ Data[i]\ =\ T\{\};}
+\DoxyCodeLine{00207\ \ \ \}}
+\DoxyCodeLine{00208\ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00211\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>::Matrix}}(\textcolor{keyword}{const}\ T\&\ value)\ \{}
+\DoxyCodeLine{00212\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ Data[i]\ =\ value;}
+\DoxyCodeLine{00214\ \ \ \}}
+\DoxyCodeLine{00215\ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00218\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>::Matrix}}(std::initializer\_list<T>\ values)\ \{}
+\DoxyCodeLine{00219\ \ \ \textcolor{keywordflow}{if}\ (values.size()\ !=\ N\ *\ M)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ARE:\ Matrix\ Initializer\ Array\ Contains\ Incorrect\ Number\ of\ Elements."{}});}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ std::size\_t\ i\ =\ 0;}
+\DoxyCodeLine{00222\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ value\ :\ values)\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ Data[i]\ =\ value;}
+\DoxyCodeLine{00224\ \ \ \ \ i++;}
+\DoxyCodeLine{00225\ \ \ \}}
+\DoxyCodeLine{00226\ \}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00229\ T\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9b40640097aa6e5e35d0802d9202cdc3}{Matrix<T,\ N,\ M>::operator()}}(std::size\_t\ n,\ std::size\_t\ m)\ \{}
+\DoxyCodeLine{00230\ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 0\ ||\ n\ >=\ N\ ||\ m\ <\ 0\ ||\ m\ >=\ M)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}AME:\ Index\ Out\ of\ Bounds."{}});}
+\DoxyCodeLine{00231\ \ \ \textcolor{keywordflow}{return}\ Data[Index(n,\ m)];}
+\DoxyCodeLine{00232\ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00235\ \textcolor{keyword}{const}\ T\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9b40640097aa6e5e35d0802d9202cdc3}{Matrix<T,\ N,\ M>::operator()}}(std::size\_t\ n,\ std::size\_t\ m)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00236\ \ \ \textcolor{keywordflow}{if}\ (n\ <\ 0\ ||\ n\ >=\ N\ ||\ m\ <\ 0\ ||\ m\ >=\ M)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}AME:\ Index\ Out\ of\ Bounds."{}});}
+\DoxyCodeLine{00237\ \ \ \textcolor{keywordflow}{return}\ Data[this-\/>Index(n,\ m)];}
+\DoxyCodeLine{00238\ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00241\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ M,\ N>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab3c90983527a017a0feedc1e89bde9c5}{Matrix<T,\ N,\ M>::as\_column\_major}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00242\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<M,\ N,\ T>}}\ column\_major;}
+\DoxyCodeLine{00243\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ M;\ i++)\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ N;\ j++)\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ column\_major(i,\ j)\ =\ Data[Index(j,\ i)];}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \textcolor{keywordflow}{return}\ column\_major;}
+\DoxyCodeLine{00249\ \}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00252\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_abb1da3ba71f04798a15691c98a0e3f58}{Matrix<T,\ N,\ M>::operator+}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ addend)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00253\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ sum;}
+\DoxyCodeLine{00254\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ sum[i]\ =\ Data[i]\ +\ addend[i];}
+\DoxyCodeLine{00256\ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \textcolor{keywordflow}{return}\ sum;}
+\DoxyCodeLine{00258\ \}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00261\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a278573e3201e2656f2b97166b42242fe}{Matrix<T,\ N,\ M>::operator-\/}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ subtrahend)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00262\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ difference;}
+\DoxyCodeLine{00263\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ difference[i]\ =\ Data[i]\ -\/\ subtrahend[i];}
+\DoxyCodeLine{00265\ \ \ \}}
+\DoxyCodeLine{00266\ \ \ \textcolor{keywordflow}{return}\ difference;}
+\DoxyCodeLine{00267\ \}}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00270\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ P>}
+\DoxyCodeLine{00271\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ P>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab9bcc695ccccfa063c12f7788107d555}{Matrix<T,\ N,\ M>::operator*}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ M,\ P>}}\&\ multiplicand)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00272\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ P>}}\ product;}
+\DoxyCodeLine{00273\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N;\ i++)\ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ P;\ j++)\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ T\ sum\{\};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ k\ =\ 0;\ k\ <\ M;\ k++)\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ sum\ +=\ Data[Index(i,\ k)]\ *\ multiplicand(k,\ j);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ product(i,\ j)\ =\ sum;}
+\DoxyCodeLine{00280\ \ \ \ \ \}}
+\DoxyCodeLine{00281\ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \textcolor{keywordflow}{return}\ product;}
+\DoxyCodeLine{00283\ \}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00286\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector<T,\ N>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab9bcc695ccccfa063c12f7788107d555}{Matrix<T,\ N,\ M>::operator*}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector<T,\ M>}}\&\ multiplicand)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00287\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector<T,\ N>}}\ product;}
+\DoxyCodeLine{00288\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N;\ i++)\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ T\ sum\{\};}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ M;\ j++)\ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ sum\ +=\ Data[Index(i,\ j)]\ *\ multiplicand(j);}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ product[i]\ =\ sum;}
+\DoxyCodeLine{00294\ \ \ \}}
+\DoxyCodeLine{00295\ \ \ \textcolor{keywordflow}{return}\ product;}
+\DoxyCodeLine{00296\ \}}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00299\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab9bcc695ccccfa063c12f7788107d555}{Matrix<T,\ N,\ M>::operator*}}(\textcolor{keyword}{const}\ T\&\ multiplicand)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00300\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ product;}
+\DoxyCodeLine{00301\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ product[i]\ =\ Data[i]\ *\ multiplicand;}
+\DoxyCodeLine{00303\ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \textcolor{keywordflow}{return}\ product;}
+\DoxyCodeLine{00305\ \}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00308\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a2d4199f0854b7277ad99939edb56e3ec}{Matrix<T,\ N,\ M>::operator+=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ addend)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00309\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00310\ \ \ \ \ Data[i]\ +=\ addend[i];}
+\DoxyCodeLine{00311\ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00313\ \}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00316\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a727f7c1c76be6b7cebd7288b421d6612}{Matrix<T,\ N,\ M>::operator-\/=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ subtrahend)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00317\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ Data[i]\ -\/=\ subtrahend[i];}
+\DoxyCodeLine{00319\ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00321\ \}}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00324\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a3e444cc87dfd4e65df2580162602f3ec}{Matrix<T,\ N,\ M>::operator*=}}(T\&\ multiplicand)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00325\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00326\ \ \ \ \ Data[i]\ +=\ multiplicand;}
+\DoxyCodeLine{00327\ \ \ \}}
+\DoxyCodeLine{00328\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00329\ \}}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00332\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\&\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a65176c4de4fc99ebcf4b4236d6471cca}{Matrix<T,\ N,\ M>::operator/=}}(T\&\ divisor)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00333\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N\ *\ M;\ i++)\ \{}
+\DoxyCodeLine{00334\ \ \ \ \ Data[i]\ /=\ divisor;}
+\DoxyCodeLine{00335\ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00337\ \}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00340\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aa9d96237ad8427893accf3c169f9cedf}{Matrix<T,\ N,\ M>::Identity}}()\ noexcept\ requires(N\ ==\ M)\ \{}
+\DoxyCodeLine{00341\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ N>}}\ identity;}
+\DoxyCodeLine{00342\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N;\ i++)\ \{}
+\DoxyCodeLine{00343\ \ \ \ \ identity(i,\ i)\ =\ T\{\ 1\ \};}
+\DoxyCodeLine{00344\ \ \ \}}
+\DoxyCodeLine{00345\ \ \ \textcolor{keywordflow}{return}\ identity;}
+\DoxyCodeLine{00346\ \}}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00349\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ M,\ N>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aeefe40bf9190ee62d1ee99c5ac2bdab8}{Matrix<T,\ N,\ M>::Transpose}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00350\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ M,\ N>}}\ transpose;}
+\DoxyCodeLine{00351\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N;\ i++)\ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ M;\ j++)\ \{}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ transpose(j,\ i)\ =\ Data[Index(i,\ j)];}
+\DoxyCodeLine{00354\ \ \ \ \ \}}
+\DoxyCodeLine{00355\ \ \ \}}
+\DoxyCodeLine{00356\ \ \ \textcolor{keywordflow}{return}\ transpose;}
+\DoxyCodeLine{00357\ \}}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00360\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a486e850043c0f65cb21836f7d303b52b}{Matrix<T,\ N,\ M>::Inverse}}()\ const\ requires(N\ ==\ M)\ \{}
+\DoxyCodeLine{00361\ \ \ \textcolor{comment}{//\ TODO(ChristopherStackpole57):\ requires\ Determinant\ to\ be\ implemented}}
+\DoxyCodeLine{00362\ \ \ \textcolor{comment}{//\ static\_assert(this-\/>Determinant()\ !=\ 0);}}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \textcolor{comment}{//\ Implements\ Gauss\ -\/\ Jordan\ Elimination}}
+\DoxyCodeLine{00365\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ N>}}\ A\ =\ *\textcolor{keyword}{this};\ \ \textcolor{comment}{//\ Copy\ current\ matrix\ for\ easier\ manipulation}}
+\DoxyCodeLine{00366\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ N>}}\ I\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aa9d96237ad8427893accf3c169f9cedf}{Matrix<T,\ N,\ N>::Identity}}();\ \ \textcolor{comment}{//\ Identity\ Matrix}}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ col\ =\ 0;\ col\ <\ N;\ col++)\ \{}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{comment}{//\ Find\ Pivot\ Row}}
+\DoxyCodeLine{00370\ \ \ \ \ std::size\_t\ pivot\ =\ col;}
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ row\ =\ col\ +\ 1;\ row\ <\ N;\ row++)\ \{}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::abs(A(row,\ col))\ >\ std::abs(A(pivot,\ row)))\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ pivot\ =\ row;}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00375\ \ \ \ \ \}}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{comment}{//\ Check\ for\ Singular\ Matrix}}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordflow}{if}\ (A(pivot,\ col)\ ==\ T\{\ 0\ \})\ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}AME:\ Singular\ Matrices\ Cannot\ Be\ Inverted."{}});}
+\DoxyCodeLine{00380\ \ \ \ \ \}}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{comment}{//\ Swap\ Current\ Row\ with\ Pivot\ Row\ in\ Both\ A\ and\ I}}
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{keywordflow}{if}\ (pivot\ !=\ col)\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ N;\ j++)\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ std::swap(A(col,\ j),\ A(pivot,\ j));}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ std::swap(I(col,\ j),\ I(pivot,\ j));}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00388\ \ \ \ \ \}}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{comment}{//\ Normalize\ Pivot\ Row}}
+\DoxyCodeLine{00391\ \ \ \ \ T\ pivot\_val\ =\ A(col,\ col);}
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ N;\ j++)\ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ A(col,\ j)\ /=\ pivot\_val;}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ I(col,\ j)\ /=\ pivot\_val;}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{comment}{//\ Eliminate\ All\ Other\ Entries\ in\ This\ Column}}
+\DoxyCodeLine{00398\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ row\ =\ 0;\ row\ <\ N;\ row++)\ \{}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row\ ==\ col)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \ \ T\ factor\ =\ A(row,\ col);}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ N;\ j++)\ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ A(row,\ j)\ -\/=\ factor\ *\ A(col,\ j);}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ I(row,\ j)\ -\/=\ factor\ *\ I(col,\ j);}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \ \ \}}
+\DoxyCodeLine{00407\ \ \ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \textcolor{keywordflow}{return}\ I;}
+\DoxyCodeLine{00410\ \}}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00413\ T\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a636bf55dcdf24e57c4a9c9b576356d22}{Matrix<T,\ N,\ M>::Determinant}}()\ const\ noexcept\ requires(N\ ==\ M)\ \{}
+\DoxyCodeLine{00414\ \ \ \textcolor{comment}{//\ TODO(ChristopherStackple57):\ implement}}
+\DoxyCodeLine{00415\ \}}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00418\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ P>}
+\DoxyCodeLine{00419\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M\ +\ P>}}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9f272c5cfb04fdf294bd59422583164f}{Matrix<T,\ N,\ M>::Augment}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ P>}}\&\ target)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00420\ \ \ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix<T,\ N,\ M\ +\ P>}}\ augment;}
+\DoxyCodeLine{00421\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N;\ i++)\ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{comment}{//\ Copy\ data\ from\ this}}
+\DoxyCodeLine{00423\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ M;\ j++)\ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ augment(i,\ j)\ =\ this-\/>Data[this-\/>Index(i,\ j)];}
+\DoxyCodeLine{00425\ \ \ \ \ \}}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{comment}{//\ Copy\ data\ from\ target}}
+\DoxyCodeLine{00428\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ P;\ j++)\ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ augment(i,\ j\ +\ M)\ =\ target(i,\ j);}
+\DoxyCodeLine{00430\ \ \ \ \ \}}
+\DoxyCodeLine{00431\ \ \ \}}
+\DoxyCodeLine{00432\ \ \ \textcolor{keywordflow}{return}\ augment;}
+\DoxyCodeLine{00433\ \}}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00441\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00442\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<T,\ N,\ M>}}\ mat)\ \{}
+\DoxyCodeLine{00443\ \ \ \ \ os\ <<\ N\ <<\ \textcolor{stringliteral}{"{}x"{}}\ <<\ M\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ N;\ i++)\ \{}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ j\ =\ 0;\ j\ <\ M;\ j++)\ \{}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ os\ <<\ mat(i,\ j)\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ os\ <<\ std::endl;}
+\DoxyCodeLine{00449\ \ \ \ \ \}}
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00451\ \}}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \}\ \ \textcolor{comment}{//\ namespace\ util::math}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_UTILITY\_MATH\_H\_}}
+
+\end{DoxyCode}

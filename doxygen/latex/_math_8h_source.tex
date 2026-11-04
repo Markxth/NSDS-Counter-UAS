@@ -1,0 +1,61 @@
+\doxysection{Math.\+h}
+\hypertarget{_math_8h_source}{}\label{_math_8h_source}\index{cpp\_code/utility/math/Math.h@{cpp\_code/utility/math/Math.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ [2026]\ Purdue\ National\ Security\ and\ Defense\ Society}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_UTILITY\_MATH\_MATH\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_UTILITY\_MATH\_MATH\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}utility/math/Matrix.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}utility/math/Vector.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }util::math\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }Vector2\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector<T,\ 2>}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }Vector2i32\ =\ Vector2<int32\_t>;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }Vector2ui32\ =\ Vector2<uint32\_t>;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }Vector2i64\ =\ Vector2<int64\_t>;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }Vector2ui64\ =\ Vector2<uint64\_t>;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }Vector2f\ =\ Vector2<float>;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }Vector2d\ =\ Vector2<double>;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ }Vector3\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector<T,\ 3>}};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }Vector3i32\ =\ Vector3<int32\_t>;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }Vector3ui32\ =\ Vector3<uint32\_t>;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ }Vector3i64\ =\ Vector3<int64\_t>;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{using\ }Vector3ui64\ =\ Vector3<uint64\_t>;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }Vector3f\ =\ Vector3<float>;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }Vector3d\ =\ Vector3<double>;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00032\ \textcolor{keyword}{using\ }Vector4\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector<T,\ 4>}};}
+\DoxyCodeLine{00033\ \textcolor{keyword}{using\ }Vector4i32\ =\ Vector4<int32\_t>;}
+\DoxyCodeLine{00034\ \textcolor{keyword}{using\ }Vector4ui32\ =\ Vector4<uint32\_t>;}
+\DoxyCodeLine{00035\ \textcolor{keyword}{using\ }Vector4i64\ =\ Vector4<int64\_t>;}
+\DoxyCodeLine{00036\ \textcolor{keyword}{using\ }Vector4ui64\ =\ Vector4<uint64\_t>;}
+\DoxyCodeLine{00037\ \textcolor{keyword}{using\ }Vector4f\ =\ Vector4<float>;}
+\DoxyCodeLine{00038\ \textcolor{keyword}{using\ }Vector4d\ =\ Vector4<double>;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00041\ \textcolor{keyword}{using\ }Matrixi32\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<int32\_t,\ N,\ M>}};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00043\ \textcolor{keyword}{using\ }Matrixui32\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<uint32\_t,\ N,\ M>}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00045\ \textcolor{keyword}{using\ }Matrixi64\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<int64\_t,\ N,\ M>}};}
+\DoxyCodeLine{00046\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00047\ \textcolor{keyword}{using\ }Matrixui64\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<uint64\_t,\ N,\ M>}};}
+\DoxyCodeLine{00048\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00049\ \textcolor{keyword}{using\ }Matrixf\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<float,\ N,\ M>}};}
+\DoxyCodeLine{00050\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ N,\ std::\textcolor{keywordtype}{size\_t}\ M>}
+\DoxyCodeLine{00051\ \textcolor{keyword}{using\ }Matrixd\ =\ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{Matrix<double,\ N,\ M>}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}\ \ \textcolor{comment}{//\ namespace\ util::math}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_UTILITY\_MATH\_MATH\_H\_}}
+
+\end{DoxyCode}

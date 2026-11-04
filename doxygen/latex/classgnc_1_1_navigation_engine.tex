@@ -1,0 +1,51 @@
+\doxysection{gnc::Navigation\+Engine Class Reference}
+\hypertarget{classgnc_1_1_navigation_engine}{}\label{classgnc_1_1_navigation_engine}\index{gnc::NavigationEngine@{gnc::NavigationEngine}}
+
+
+Handles the navigation logic for the C-\/\+UAS GNC system.  
+
+
+
+
+{\ttfamily \+\#include $<$navigation.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgnc_1_1_navigation_engine_ad06608b0ef8eb17f7a0544a192588481}\label{classgnc_1_1_navigation_engine_ad06608b0ef8eb17f7a0544a192588481} 
+{\bfseries Navigation\+Engine} (const Navigation\+Engine \&)=delete
+\item 
+\Hypertarget{classgnc_1_1_navigation_engine_ab2bf0d5fde4614a46de3e2899504cf4a}\label{classgnc_1_1_navigation_engine_ab2bf0d5fde4614a46de3e2899504cf4a} 
+Navigation\+Engine \& {\bfseries operator=} (const Navigation\+Engine \&)=delete
+\item 
+util::\+math::\+\+Vector2d \doxymbox{\hyperlink{classgnc_1_1_navigation_engine_af4bb6b85e52d67b4249d77d8ccfdc5d9}{get\+\_\+current\+\_\+statevector}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Determines the current statevector of the sentry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the navigation logic for the C-\/\+UAS GNC system. 
+
+The \doxylink{classgnc_1_1_navigation_engine}{Navigation\+Engine} is responsible for determine the current state of the turret relative to its base state and surroundings. Internally the \doxylink{classgnc_1_1_navigation_engine}{Navigation\+Engine} listens to IMUs and rotary encoders in the turret structure to determine the current state, and may use GIS information to augment state measurements. 
+
+\label{classgnc_1_1_navigation_engine_doc-func-members}
+\Hypertarget{classgnc_1_1_navigation_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgnc_1_1_navigation_engine_af4bb6b85e52d67b4249d77d8ccfdc5d9}\index{gnc::NavigationEngine@{gnc::NavigationEngine}!get\_current\_statevector@{get\_current\_statevector}}
+\index{get\_current\_statevector@{get\_current\_statevector}!gnc::NavigationEngine@{gnc::NavigationEngine}}
+\doxysubsubsection{\texorpdfstring{get\_current\_statevector()}{get\_current\_statevector()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_navigation_engine_af4bb6b85e52d67b4249d77d8ccfdc5d9} 
+util::\+math::\+\+Vector2d gnc::\+\+Navigation\+Engine::\+get\+\_\+current\+\_\+statevector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Determines the current statevector of the sentry. 
+
+\begin{DoxyReturn}{Returns}
+The current statevector of the sentry. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+gnc/navigation.\+h\item 
+cpp\+\_\+code/\+gnc/navigation.\+cpp\end{DoxyCompactItemize}

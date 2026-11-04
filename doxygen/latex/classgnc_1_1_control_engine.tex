@@ -1,0 +1,127 @@
+\doxysection{gnc::Control\+Engine Class Reference}
+\hypertarget{classgnc_1_1_control_engine}{}\label{classgnc_1_1_control_engine}\index{gnc::ControlEngine@{gnc::ControlEngine}}
+
+
+Handles the control logic for the C-\/\+UAS GNC system.  
+
+
+
+
+{\ttfamily \+\#include $<$controls.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{Control\+Engine}} (double kp, double ki, double kd, double integral=0, double prev\+\_\+error=0, double prev\+\_\+time=0)
+\begin{DoxyCompactList}\small\item\em Builds the loop from its gains and a resumable seed state, so a running loop survives a restart without resetting the integral. \end{DoxyCompactList}\item 
+\Hypertarget{classgnc_1_1_control_engine_a2b457daa553e7de963d92b537a49752f}\label{classgnc_1_1_control_engine_a2b457daa553e7de963d92b537a49752f} 
+{\bfseries Control\+Engine} (const Control\+Engine \&)=delete
+\item 
+\Hypertarget{classgnc_1_1_control_engine_a02da91ca01828f2936a88dd45626c69f}\label{classgnc_1_1_control_engine_a02da91ca01828f2936a88dd45626c69f} 
+\doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{Control\+Engine}} \& {\bfseries operator=} (const \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{Control\+Engine}} \&)=delete
+\item 
+\Hypertarget{classgnc_1_1_control_engine_a9a711f27613da88295e95ec48871252f}\label{classgnc_1_1_control_engine_a9a711f27613da88295e95ec48871252f} 
+double {\bfseries get\+\_\+kp} () const noexcept
+\item 
+\Hypertarget{classgnc_1_1_control_engine_afcadc1264ac3cea690c3bcba018f0a6d}\label{classgnc_1_1_control_engine_afcadc1264ac3cea690c3bcba018f0a6d} 
+double {\bfseries get\+\_\+ki} () const noexcept
+\item 
+\Hypertarget{classgnc_1_1_control_engine_a73db48863b2acc94bbbb11b6c34cf232}\label{classgnc_1_1_control_engine_a73db48863b2acc94bbbb11b6c34cf232} 
+double {\bfseries get\+\_\+kd} () const noexcept
+\item 
+\Hypertarget{classgnc_1_1_control_engine_a6ce6c4f7936dab562ef274178e2bdce2}\label{classgnc_1_1_control_engine_a6ce6c4f7936dab562ef274178e2bdce2} 
+double {\bfseries get\+\_\+integral} () const noexcept
+\item 
+\Hypertarget{classgnc_1_1_control_engine_aa0ff19c8cc7c6b23f246b044c617b0eb}\label{classgnc_1_1_control_engine_aa0ff19c8cc7c6b23f246b044c617b0eb} 
+double {\bfseries get\+\_\+prev\+\_\+error} () const noexcept
+\item 
+\Hypertarget{classgnc_1_1_control_engine_a239fed70a82355e8e3187bd3b1e245b1}\label{classgnc_1_1_control_engine_a239fed70a82355e8e3187bd3b1e245b1} 
+double {\bfseries get\+\_\+prev\+\_\+time} () const noexcept
+\item 
+double \doxymbox{\hyperlink{classgnc_1_1_control_engine_a5732306b4ceb6d31e1fb3921962341fc}{PID}} (double error) noexcept
+\begin{DoxyCompactList}\small\item\em Estimates and corrects the aiming error for one control step. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classgnc_1_1_control_engine_ae9011ca2bf46cbe9245154ac71914379}{aim\+\_\+at\+\_\+desired\+\_\+statevector}} (const util::\+math::\+\+Vector2d \&current\+\_\+statevector\+\_\+ae, const util::\+math::\+\+Vector2d \&desired\+\_\+statevector\+\_\+ae) noexcept
+\begin{DoxyCompactList}\small\item\em Aims the sentry at the target statevector given the current state vector of the sentry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the control logic for the C-\/\+UAS GNC system. 
+
+The \doxylink{classgnc_1_1_control_engine}{Control\+Engine} receives a target location and emits hardware signals to align the turret to it. Internally it runs a PID loop that estimates and corrects aiming error from external forces such as wind and recoil. Error is in radians of turret deflection. Ported from pycode/\+gnc/\+controls.\+py. 
+
+\label{classgnc_1_1_control_engine_doc-constructors}
+\Hypertarget{classgnc_1_1_control_engine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}\index{gnc::ControlEngine@{gnc::ControlEngine}!ControlEngine@{ControlEngine}}
+\index{ControlEngine@{ControlEngine}!gnc::ControlEngine@{gnc::ControlEngine}}
+\doxysubsubsection{\texorpdfstring{ControlEngine()}{ControlEngine()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea} 
+gnc::\+\+Control\+Engine::\+\+Control\+Engine (\begin{DoxyParamCaption}\item[{double}]{kp}{, }\item[{double}]{ki}{, }\item[{double}]{kd}{, }\item[{double}]{integral}{ = {\ttfamily 0}, }\item[{double}]{prev\+\_\+error}{ = {\ttfamily 0}, }\item[{double}]{prev\+\_\+time}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Builds the loop from its gains and a resumable seed state, so a running loop survives a restart without resetting the integral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kp} & proportional multiplier. \\
+\hline
+{\em ki} & integral multiplier. \\
+\hline
+{\em kd} & derivative multiplier. \\
+\hline
+{\em integral} & integral accumulator for PID calculations. \\
+\hline
+{\em prev\+\_\+error} & a seed error to use for PID calculations. \\
+\hline
+{\em prev\+\_\+time} & a seed time in seconds; 0 means "{}not yet seeded"{}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{classgnc_1_1_control_engine_doc-func-members}
+\Hypertarget{classgnc_1_1_control_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgnc_1_1_control_engine_ae9011ca2bf46cbe9245154ac71914379}\index{gnc::ControlEngine@{gnc::ControlEngine}!aim\_at\_desired\_statevector@{aim\_at\_desired\_statevector}}
+\index{aim\_at\_desired\_statevector@{aim\_at\_desired\_statevector}!gnc::ControlEngine@{gnc::ControlEngine}}
+\doxysubsubsection{\texorpdfstring{aim\_at\_desired\_statevector()}{aim\_at\_desired\_statevector()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_control_engine_ae9011ca2bf46cbe9245154ac71914379} 
+void gnc::\+\+Control\+Engine::\+aim\+\_\+at\+\_\+desired\+\_\+statevector (\begin{DoxyParamCaption}\item[{const util::\+math::\+\+Vector2d \&}]{current\+\_\+statevector\+\_\+ae}{, }\item[{const util::\+math::\+\+Vector2d \&}]{desired\+\_\+statevector\+\_\+ae}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Aims the sentry at the target statevector given the current state vector of the sentry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+statevector\+\_\+ae} & The absolute AE statevector the sentry is currently aiming at. \\
+\hline
+{\em desired\+\_\+statevector\+\_\+ae} & The absolute AE statevector to aim it. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgnc_1_1_control_engine_a5732306b4ceb6d31e1fb3921962341fc}\index{gnc::ControlEngine@{gnc::ControlEngine}!PID@{PID}}
+\index{PID@{PID}!gnc::ControlEngine@{gnc::ControlEngine}}
+\doxysubsubsection{\texorpdfstring{PID()}{PID()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_control_engine_a5732306b4ceb6d31e1fb3921962341fc} 
+double gnc::\+\+Control\+Engine::\+\+PID (\begin{DoxyParamCaption}\item[{double}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Estimates and corrects the aiming error for one control step. 
+
+u = kp\texorpdfstring{$\ast$}{*}e + ki\texorpdfstring{$\ast$}{*}integral(e\texorpdfstring{$\ast$}{*}dt) + kd\texorpdfstring{$\ast$}{*}(de/\+dt). Advances loop state, so this runs at the control rate rather than once per received measurement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & the instantaneous error, in radians of turret deflection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the correction signal for the actuator. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+gnc/controls.\+h\item 
+cpp\+\_\+code/\+gnc/controls.\+cpp\end{DoxyCompactItemize}

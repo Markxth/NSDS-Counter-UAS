@@ -1,0 +1,31 @@
+\doxysection{Heuristic\+Config\+Loader.\+h}
+\hypertarget{_heuristic_config_loader_8h_source}{}\label{_heuristic_config_loader_8h_source}\index{cpp\_code/gnc/HeuristicConfigLoader.h@{cpp\_code/gnc/HeuristicConfigLoader.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ [2026]\ Purdue\ National\ Security\ and\ Defense\ Society}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICCONFIGLOADER\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICCONFIGLOADER\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}gnc/Heuristic.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}gnc/HeuristicRuleRegistry.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }gnc::heuristics\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }HeuristicConfigLoader\ \{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ HeuristicConfigLoader()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \string~HeuristicConfigLoader()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \ \ \ \ [[nodiscard]]\ HeuristicRuleset\ \doxymbox{\hyperlink{classgnc_1_1heuristics_1_1_heuristic_config_loader_ad0ba47be706372447ff901e972af0e1a}{load\_ruleset\_from\_file}}(\textcolor{keyword}{const}\ std::string\ file\_path)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{classgnc_1_1heuristics_1_1_heuristic_rule_registry}{HeuristicRuleRegistry}}\ registry;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICCONFIGLOADER\_H\_}}
+
+\end{DoxyCode}

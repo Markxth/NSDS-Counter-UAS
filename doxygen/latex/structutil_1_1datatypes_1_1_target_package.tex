@@ -1,0 +1,42 @@
+\doxysection{util::datatypes::Target\+Package Struct Reference}
+\hypertarget{structutil_1_1datatypes_1_1_target_package}{}\label{structutil_1_1datatypes_1_1_target_package}\index{util::datatypes::TargetPackage@{util::datatypes::TargetPackage}}
+
+
+Contains data about a single possible target as determined by the sensor systems.  
+
+
+
+
+{\ttfamily \+\#include $<$Target\+Package.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structutil_1_1datatypes_1_1_target_package_a794d0b59862e6fece18993c1de29c52f}\label{structutil_1_1datatypes_1_1_target_package_a794d0b59862e6fece18993c1de29c52f} 
+std::\+size\+\_\+t {\bfseries target\+\_\+id}
+\item 
+\Hypertarget{structutil_1_1datatypes_1_1_target_package_a8cf36d7a5400163960f570addf7f28d9}\label{structutil_1_1datatypes_1_1_target_package_a8cf36d7a5400163960f570addf7f28d9} 
+double {\bfseries time}
+\item 
+\Hypertarget{structutil_1_1datatypes_1_1_target_package_aa73f1a9bf8bcc3ddb2dd04bb868d30ae}\label{structutil_1_1datatypes_1_1_target_package_aa73f1a9bf8bcc3ddb2dd04bb868d30ae} 
+util::\+math::\+\+Vector3d {\bfseries absolute\+\_\+position\+\_\+xyz}
+\item 
+\Hypertarget{structutil_1_1datatypes_1_1_target_package_a87007d424c794c2b3cf0f49654c3fd67}\label{structutil_1_1datatypes_1_1_target_package_a87007d424c794c2b3cf0f49654c3fd67} 
+util::\+math::\+\+Vector3d {\bfseries absolute\+\_\+velocity\+\_\+xyz}
+\item 
+\Hypertarget{structutil_1_1datatypes_1_1_target_package_a105e81dc2041ebcd13353399780216d3}\label{structutil_1_1datatypes_1_1_target_package_a105e81dc2041ebcd13353399780216d3} 
+double {\bfseries measurement\+\_\+uncertainty}
+\item 
+\Hypertarget{structutil_1_1datatypes_1_1_target_package_a2aab2e2b6691174842d350a6acf86e72}\label{structutil_1_1datatypes_1_1_target_package_a2aab2e2b6691174842d350a6acf86e72} 
+double {\bfseries target\+\_\+confidence}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains data about a single possible target as determined by the sensor systems. 
+
+The \doxylink{structutil_1_1datatypes_1_1_target_package}{Target\+Package} stores vectors in rotated xyz coordinates. These rotated vectors are found by takeing the screen space coordinates (and range) of a target and converting them into xyz coordinates with the camera assumed to be at the origin with no rotation. In actuality, the camera likely has some rotation, which means the \textquotesingle{}rotated\textquotesingle{} vectors are not the same in the fixed frame. \textquotesingle{}Rotated\textquotesingle{} vectors can be converted into fixed frame vectors using the known orientation of the camera. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+utility/\+datatypes/Target\+Package.\+h\end{DoxyCompactItemize}
