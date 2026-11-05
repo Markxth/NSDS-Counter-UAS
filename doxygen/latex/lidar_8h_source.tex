@@ -1,0 +1,32 @@
+\doxysection{lidar.\+h}
+\hypertarget{lidar_8h_source}{}\label{lidar_8h_source}\index{cpp\_code/lidar/lidar.h@{cpp\_code/lidar/lidar.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ [2026]\ Purdue\ National\ Security\ and\ Defense\ Society}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_LIDAR\_LIDAR\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_LIDAR\_LIDAR\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}clustering.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}detection.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}preprocessing.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }lidar\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }LidarEngine\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ LidarEngine()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ LidarEngine(\textcolor{keyword}{const}\ LidarEngine\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ \ \ \string~LidarEngine()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ LidarEngine\&\ operator=(\textcolor{keyword}{const}\ LidarEngine\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \doxymbox{\hyperlink{classlidar_1_1_preprocessing_engine}{PreprocessingEngine}}\ preprocessing\_engine;}
+\DoxyCodeLine{00027\ \ \ \doxymbox{\hyperlink{classlidar_1_1_clustering_engine}{ClusteringEngine}}\ clustering\_engine;}
+\DoxyCodeLine{00028\ \ \ \doxymbox{\hyperlink{classlidar_1_1_detection_engine}{DetectionEngine}}\ detection\_engine;}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \}\ \ \textcolor{comment}{//\ namespace\ lidar}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_LIDAR\_LIDAR\_H\_}}
+
+\end{DoxyCode}

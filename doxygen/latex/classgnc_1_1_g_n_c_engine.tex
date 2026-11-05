@@ -1,0 +1,53 @@
+\doxysection{gnc::GNCEngine Class Reference}
+\hypertarget{classgnc_1_1_g_n_c_engine}{}\label{classgnc_1_1_g_n_c_engine}\index{gnc::GNCEngine@{gnc::GNCEngine}}
+
+
+Handles GNC engine orchestration.  
+
+
+
+
+{\ttfamily \+\#include $<$gnc.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgnc_1_1_g_n_c_engine_a22b9fb231aec24340f213b346e60efc1}\label{classgnc_1_1_g_n_c_engine_a22b9fb231aec24340f213b346e60efc1} 
+{\bfseries GNCEngine} (const GNCEngine \&)=delete
+\item 
+\Hypertarget{classgnc_1_1_g_n_c_engine_adac475f24bfc8b49c9a7a77a756ecfae}\label{classgnc_1_1_g_n_c_engine_adac475f24bfc8b49c9a7a77a756ecfae} 
+GNCEngine \& {\bfseries operator=} (const GNCEngine \&)=delete
+\item 
+void \doxymbox{\hyperlink{classgnc_1_1_g_n_c_engine_a2799626aa3e3badf7f31f834640a8bb6}{receive\+\_\+target\+\_\+packages}} (const std::\+vector$<$ \doxymbox{\hyperlink{structutil_1_1datatypes_1_1_target_package}{util::\+datatypes::\+\+Target\+Package}} $>$ \&target\+\_\+packages) noexcept
+\begin{DoxyCompactList}\small\item\em Public interface for delivering target packages to the GNC engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles GNC engine orchestration. 
+
+\doxylink{classgnc_1_1_g_n_c_engine}{GNCEngine} is responsible for orchestrating the execution of various components of the Guidance, Navigation, and Control code. \doxylink{classgnc_1_1_g_n_c_engine}{GNCEngine}\textquotesingle{}s primary public interface is the receive\+\_\+target\+\_\+packages method which receives a list of target packages and then makes choices about which target to prioritize and executes the necessary code to acquire that target. 
+
+\label{classgnc_1_1_g_n_c_engine_doc-func-members}
+\Hypertarget{classgnc_1_1_g_n_c_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgnc_1_1_g_n_c_engine_a2799626aa3e3badf7f31f834640a8bb6}\index{gnc::GNCEngine@{gnc::GNCEngine}!receive\_target\_packages@{receive\_target\_packages}}
+\index{receive\_target\_packages@{receive\_target\_packages}!gnc::GNCEngine@{gnc::GNCEngine}}
+\doxysubsubsection{\texorpdfstring{receive\_target\_packages()}{receive\_target\_packages()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_g_n_c_engine_a2799626aa3e3badf7f31f834640a8bb6} 
+void gnc::\+\+GNCEngine::\+receive\+\_\+target\+\_\+packages (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{structutil_1_1datatypes_1_1_target_package}{util::\+datatypes::\+\+Target\+Package}} $>$ \&}]{target\+\_\+packages}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Public interface for delivering target packages to the GNC engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+packages} & a vector of target packages for processing. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+gnc/gnc.\+h\item 
+cpp\+\_\+code/\+gnc/gnc.\+cpp\end{DoxyCompactItemize}

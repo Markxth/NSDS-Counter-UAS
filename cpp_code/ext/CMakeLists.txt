@@ -1,4 +1,5 @@
 add_library(ext STATIC
+	doctest.h
 	toml.h
 )
 

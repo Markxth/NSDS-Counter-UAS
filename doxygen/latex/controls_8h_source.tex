@@ -1,0 +1,46 @@
+\doxysection{controls.\+h}
+\hypertarget{controls_8h_source}{}\label{controls_8h_source}\index{cpp\_code/gnc/controls.h@{cpp\_code/gnc/controls.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ [2026]\ Purdue\ National\ Security\ and\ Defense\ Society}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_CONTROLS\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_CONTROLS\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}utility/math/Math.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }gnc\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{ControlEngine}}\ \{}
+\DoxyCodeLine{00019\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{ControlEngine}}(\textcolor{keywordtype}{double}\ kp,\ \textcolor{keywordtype}{double}\ ki,\ \textcolor{keywordtype}{double}\ kd,\ \textcolor{keywordtype}{double}\ integral\ =\ 0,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ prev\_error\ =\ 0,\ \textcolor{keywordtype}{double}\ prev\_time\ =\ 0);}
+\DoxyCodeLine{00032\ \ \ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{ControlEngine}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{ControlEngine}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{\string~ControlEngine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{ControlEngine}}\&\ operator=(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a0c7d780a01d8de4f994193405802c3ea}{ControlEngine}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ get\_kp()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00037\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ get\_ki()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00038\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ get\_kd()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00039\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ get\_integral()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00040\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ get\_prev\_error()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00041\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ get\_prev\_time()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00052\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{classgnc_1_1_control_engine_a5732306b4ceb6d31e1fb3921962341fc}{PID}}(\textcolor{keywordtype}{double}\ error)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classgnc_1_1_control_engine_ae9011ca2bf46cbe9245154ac71914379}{aim\_at\_desired\_statevector}}(\textcolor{keyword}{const}\ util::math::Vector2d\&\ current\_statevector\_ae,\ \textcolor{keyword}{const}\ util::math::Vector2d\&\ desired\_statevector\_ae)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{double}\ kp\_;}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{double}\ ki\_;}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{double}\ kd\_;}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{double}\ integral\_;}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{double}\ prev\_error\_;}
+\DoxyCodeLine{00067\ \ \ \textcolor{comment}{//\ Seconds\ on\ the\ monotonic\ clock,\ matching\ Python's\ time.monotonic().}}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{double}\ prev\_time\_;}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \}\ \ \textcolor{comment}{//\ namespace\ gnc}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_CONTROLS\_H\_}}
+
+\end{DoxyCode}

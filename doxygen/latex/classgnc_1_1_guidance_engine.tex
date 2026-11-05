@@ -1,0 +1,93 @@
+\doxysection{gnc::Guidance\+Engine Class Reference}
+\hypertarget{classgnc_1_1_guidance_engine}{}\label{classgnc_1_1_guidance_engine}\index{gnc::GuidanceEngine@{gnc::GuidanceEngine}}
+
+
+Handles the guidance logic for the C-\/\+UAS GNC system.  
+
+
+
+
+{\ttfamily \+\#include $<$guidance.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgnc_1_1_guidance_engine_a4a8fd439188137b41e4ce6ad14ef448b}\label{classgnc_1_1_guidance_engine_a4a8fd439188137b41e4ce6ad14ef448b} 
+{\bfseries Guidance\+Engine} (const Guidance\+Engine \&)=delete
+\item 
+\Hypertarget{classgnc_1_1_guidance_engine_abf160322784f8beb73d7639ae728b56f}\label{classgnc_1_1_guidance_engine_abf160322784f8beb73d7639ae728b56f} 
+Guidance\+Engine \& {\bfseries operator=} (const Guidance\+Engine \&)=delete
+\item 
+heuristics::\+\+Target\+Priority\+Queue \doxymbox{\hyperlink{classgnc_1_1_guidance_engine_af525d55cbd88b76c94b6b5363de07887}{determine\+\_\+target\+\_\+priorities}} (const std::\+vector$<$ \doxymbox{\hyperlink{structutil_1_1datatypes_1_1_target_package}{util::\+datatypes::\+\+Target\+Package}} $>$ \&target\+\_\+packages) const noexcept
+\begin{DoxyCompactList}\small\item\em Applies a weighted heuristic to determine the priority of each target in the provided list of target packages. \end{DoxyCompactList}\item 
+util::\+math::\+\+Vector2d \doxymbox{\hyperlink{classgnc_1_1_guidance_engine_a15a7d40bd0b86269815e6ab67833eb05}{determine\+\_\+desired\+\_\+statevector}} (const std::\+vector$<$ \doxymbox{\hyperlink{structutil_1_1datatypes_1_1_target_package}{util::\+datatypes::\+\+Target\+Package}} $>$ \&target\+\_\+packages) const noexcept
+\begin{DoxyCompactList}\small\item\em Guidance engine entry and exit point. Receives a list of target packages and the current statevector of the sentry and determines a desired aim statevector. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classgnc_1_1_guidance_engine_aefd6744fa4d36cdd3a6ef063644da177}{set\+\_\+targeting\+\_\+heuristic\+\_\+ruleset}} (heuristics::\+\+Heuristic\+Ruleset ruleset) noexcept
+\begin{DoxyCompactList}\small\item\em Sets the heuristic ruleset used by the targeting system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the guidance logic for the C-\/\+UAS GNC system. 
+
+The \doxylink{classgnc_1_1_guidance_engine}{Guidance\+Engine} is responsible for receiving target packages and determining what the turret should aim at. The \doxylink{classgnc_1_1_guidance_engine}{Guidance\+Engine} must also determine what the ballistic effects of the current projectile package will be, and calculate the necessary offsets to hit the chosen target. 
+
+\label{classgnc_1_1_guidance_engine_doc-func-members}
+\Hypertarget{classgnc_1_1_guidance_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgnc_1_1_guidance_engine_a15a7d40bd0b86269815e6ab67833eb05}\index{gnc::GuidanceEngine@{gnc::GuidanceEngine}!determine\_desired\_statevector@{determine\_desired\_statevector}}
+\index{determine\_desired\_statevector@{determine\_desired\_statevector}!gnc::GuidanceEngine@{gnc::GuidanceEngine}}
+\doxysubsubsection{\texorpdfstring{determine\_desired\_statevector()}{determine\_desired\_statevector()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_guidance_engine_a15a7d40bd0b86269815e6ab67833eb05} 
+util::\+math::\+\+Vector2d gnc::\+\+Guidance\+Engine::\+determine\+\_\+desired\+\_\+statevector (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{structutil_1_1datatypes_1_1_target_package}{util::\+datatypes::\+\+Target\+Package}} $>$ \&}]{target\+\_\+packages}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Guidance engine entry and exit point. Receives a list of target packages and the current statevector of the sentry and determines a desired aim statevector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+packages} & A vector of target packages for processing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The AE statevector that the sentry should aim at. 
+\end{DoxyReturn}
+\Hypertarget{classgnc_1_1_guidance_engine_af525d55cbd88b76c94b6b5363de07887}\index{gnc::GuidanceEngine@{gnc::GuidanceEngine}!determine\_target\_priorities@{determine\_target\_priorities}}
+\index{determine\_target\_priorities@{determine\_target\_priorities}!gnc::GuidanceEngine@{gnc::GuidanceEngine}}
+\doxysubsubsection{\texorpdfstring{determine\_target\_priorities()}{determine\_target\_priorities()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_guidance_engine_af525d55cbd88b76c94b6b5363de07887} 
+heuristics::\+\+Target\+Priority\+Queue gnc::\+\+Guidance\+Engine::\+determine\+\_\+target\+\_\+priorities (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{structutil_1_1datatypes_1_1_target_package}{util::\+datatypes::\+\+Target\+Package}} $>$ \&}]{target\+\_\+packages}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Applies a weighted heuristic to determine the priority of each target in the provided list of target packages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+packages} & A vector of target packages to sort by priority. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A priority queue of targets. 
+\end{DoxyReturn}
+\Hypertarget{classgnc_1_1_guidance_engine_aefd6744fa4d36cdd3a6ef063644da177}\index{gnc::GuidanceEngine@{gnc::GuidanceEngine}!set\_targeting\_heuristic\_ruleset@{set\_targeting\_heuristic\_ruleset}}
+\index{set\_targeting\_heuristic\_ruleset@{set\_targeting\_heuristic\_ruleset}!gnc::GuidanceEngine@{gnc::GuidanceEngine}}
+\doxysubsubsection{\texorpdfstring{set\_targeting\_heuristic\_ruleset()}{set\_targeting\_heuristic\_ruleset()}}
+{\footnotesize\ttfamily \label{classgnc_1_1_guidance_engine_aefd6744fa4d36cdd3a6ef063644da177} 
+void gnc::\+\+Guidance\+Engine::\+set\+\_\+targeting\+\_\+heuristic\+\_\+ruleset (\begin{DoxyParamCaption}\item[{heuristics::\+\+Heuristic\+Ruleset}]{ruleset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Sets the heuristic ruleset used by the targeting system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rules} & The heuristic ruleset to use for targeting. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+gnc/guidance.\+h\item 
+cpp\+\_\+code/\+gnc/guidance.\+cpp\end{DoxyCompactItemize}

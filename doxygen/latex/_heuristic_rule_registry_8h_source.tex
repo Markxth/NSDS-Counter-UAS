@@ -1,0 +1,31 @@
+\doxysection{Heuristic\+Rule\+Registry.\+h}
+\hypertarget{_heuristic_rule_registry_8h_source}{}\label{_heuristic_rule_registry_8h_source}\index{cpp\_code/gnc/HeuristicRuleRegistry.h@{cpp\_code/gnc/HeuristicRuleRegistry.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ [2026]\ Purdue\ National\ Security\ and\ Defense\ Society}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICRULEREGISTRY\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICRULEREGISTRY\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}gnc/Heuristic.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }gnc::heuristics\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }HeuristicRuleRegistry\ \{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ HeuristicRuleRegistry();}
+\DoxyCodeLine{00015\ \ \ \ \ \string~HeuristicRuleRegistry()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \ \ \ \ [[nodiscard]]\ HeuristicRule\ \doxymbox{\hyperlink{classgnc_1_1heuristics_1_1_heuristic_rule_registry_a1d919deb1f9456c1a7e3164877005f75}{get\_rule\_from\_id}}(std::string\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ std::unordered\_map<std::string,\ HeuristicRule>\ registry;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}\ \ \textcolor{comment}{//\ namespace\ gnc::heuristics}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICRULEREGISTRY\_H\_}}
+
+\end{DoxyCode}

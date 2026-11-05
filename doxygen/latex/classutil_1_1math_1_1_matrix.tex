@@ -1,0 +1,508 @@
+\doxysection{util::math::Matrix\texorpdfstring{$<$}{<} T, N, M \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classutil_1_1math_1_1_matrix}{}\label{classutil_1_1math_1_1_matrix}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+
+
+Organizes generic data and exposes common matrix operations.  
+
+
+
+
+{\ttfamily \+\#include $<$Matrix.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}\label{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04} 
+{\bfseries Matrix} ()
+\begin{DoxyCompactList}\small\item\em Constructs a matrix of the given dimensions where every element contains the default value for the given datatype. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a989551aaad54cd83602f94985f0cd5b4}{Matrix}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Constructs a matrix of the given dimensions where every element contains the given value. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a28d523ee5ba14ff7635ecee17eb8fd15}{Matrix}} (std::\+initializer\+\_\+list$<$ T $>$ values)
+\begin{DoxyCompactList}\small\item\em Constructs a matrix of the given domensions from the provided elements. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9b40640097aa6e5e35d0802d9202cdc3}{operator()}} (std::\+size\+\_\+t n, std::\+size\+\_\+t m)
+\begin{DoxyCompactList}\small\item\em Returns a non-\/const reference to the element at the given indices. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a7305a054bf00be5e479c5bab7a2d499b}{operator()}} (std::\+size\+\_\+t n, std::\+size\+\_\+t m) const
+\begin{DoxyCompactList}\small\item\em Returns a const reference to the element at the given indices. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, M, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab3c90983527a017a0feedc1e89bde9c5}{as\+\_\+column\+\_\+major}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the matrix as a column major matrix. This is the same as the transpose of the matrix. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_abb1da3ba71f04798a15691c98a0e3f58}{operator+}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&addend) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the sum of two matrices. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a278573e3201e2656f2b97166b42242fe}{operator-\/}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&subtrahend) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the difference of two matrices. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std::\+size\+\_\+t P$>$ }\\\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, P $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_ab9bcc695ccccfa063c12f7788107d555}{operator\texorpdfstring{$\ast$}{*}}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, M, P $>$ \&multiplicand) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the product of two matrices. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a3b8e619ce5893d06d50445d780094e97}{operator\texorpdfstring{$\ast$}{*}}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector}}$<$ T, M $>$ \&multiplicand) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the product of a matrix and a vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a311c72de80646e362afc7865deceb7c3}{operator\texorpdfstring{$\ast$}{*}}} (const T \&multiplicand) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the scalar product by a given scalar. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a8a4dc60928bfa6b1bcd8795ed13f14c4}{operator/}} (T \&divisor) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the scalar quotient from a given scalar. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a2d4199f0854b7277ad99939edb56e3ec}{operator+=}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&addend) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the sum of two matrices and assigns the result to the left-\/hand matrix. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a727f7c1c76be6b7cebd7288b421d6612}{operator-\/=}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&subtrahend) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the difference of two matrices and assigns the result to the left-\/hand matrix. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a3e444cc87dfd4e65df2580162602f3ec}{operator\texorpdfstring{$\ast$}{*}=}} (T \&multiplicand) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the scalar product by a given scalar and assigns the result to the left-\/hand matrix. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a65176c4de4fc99ebcf4b4236d6471cca}{operator/\+=}} (T \&divisor) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the scalar quotient from a given scalar and assigns the result to the left-\/hand matrix. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, M, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aeefe40bf9190ee62d1ee99c5ac2bdab8}{Transpose}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the transpose of the given matrix. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a486e850043c0f65cb21836f7d303b52b}{Inverse}} () const
+\begin{DoxyCompactList}\small\item\em Returns the inverse of the given matrix. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a636bf55dcdf24e57c4a9c9b576356d22}{Determinant}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the determinant of the given matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std::\+size\+\_\+t P$>$ }\\\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M+P $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a9f272c5cfb04fdf294bd59422583164f}{Augment}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, P $>$ \&target) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the augment of the given matrix and the target matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aa9d96237ad8427893accf3c169f9cedf}{Identity}} () noexcept
+\begin{DoxyCompactList}\small\item\em Returns a square identity matrix of the given size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_aae5d34777431b7c6a8c08f6aaa030b53}{operator\+[$\,$]}} (const std::\+size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Returns the element at the provided linear index. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a3b4231688bbe6783f83d8eecda3ad7cc}{operator\+[$\,$]}} (const std::\+size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em Returns the element at the provided linear index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$\newline
+class util::\+math::\+\+Matrix$<$ T, N, M $>$}
+Organizes generic data and exposes common matrix operations. 
+
+\label{classutil_1_1math_1_1_matrix_doc-constructors}
+\Hypertarget{classutil_1_1math_1_1_matrix_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classutil_1_1math_1_1_matrix_a989551aaad54cd83602f94985f0cd5b4}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a989551aaad54cd83602f94985f0cd5b4} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Matrix (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a matrix of the given dimensions where every element contains the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value for each element. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classutil_1_1math_1_1_matrix_a28d523ee5ba14ff7635ecee17eb8fd15}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a28d523ee5ba14ff7635ecee17eb8fd15} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Matrix (\begin{DoxyParamCaption}\item[{std::\+initializer\+\_\+list$<$ T $>$}]{values}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a matrix of the given domensions from the provided elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & The values to initialize the matrix with. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If values.\+size != N \texorpdfstring{$\ast$}{*} M. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{classutil_1_1math_1_1_matrix_doc-func-members}
+\Hypertarget{classutil_1_1math_1_1_matrix_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classutil_1_1math_1_1_matrix_ab3c90983527a017a0feedc1e89bde9c5}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!as\_column\_major@{as\_column\_major}}
+\index{as\_column\_major@{as\_column\_major}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{as\_column\_major()}{as\_column\_major()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_ab3c90983527a017a0feedc1e89bde9c5} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, M, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+as\+\_\+column\+\_\+major (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the matrix as a column major matrix. This is the same as the transpose of the matrix. 
+
+\begin{DoxyReturn}{Returns}
+A column-\/major version of the matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a9f272c5cfb04fdf294bd59422583164f}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Augment@{Augment}}
+\index{Augment@{Augment}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Augment()}{Augment()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a9f272c5cfb04fdf294bd59422583164f} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+template$<$std::\+size\+\_\+t P$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M+P $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Augment (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, P $>$ \&}]{target}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Returns the augment of the given matrix and the target matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The matrix to augment the given matrix with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The given matrix augmented with the target matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a636bf55dcdf24e57c4a9c9b576356d22}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a636bf55dcdf24e57c4a9c9b576356d22} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \newline
+requires (N == M)\\
+T \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Determinant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the determinant of the given matrix. 
+
+\begin{DoxyReturn}{Returns}
+The determinant of the given matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_aa9d96237ad8427893accf3c169f9cedf}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Identity@{Identity}}
+\index{Identity@{Identity}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Identity()}{Identity()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_aa9d96237ad8427893accf3c169f9cedf} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \newline
+requires (N == M)\\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Identity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns a square identity matrix of the given size. 
+
+\begin{DoxyReturn}{Returns}
+A square identity matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a486e850043c0f65cb21836f7d303b52b}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a486e850043c0f65cb21836f7d303b52b} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \newline
+requires (N == M)\\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Inverse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns the inverse of the given matrix. 
+
+\begin{DoxyReturn}{Returns}
+The inverse of the given matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a9b40640097aa6e5e35d0802d9202cdc3}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a9b40640097aa6e5e35d0802d9202cdc3} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator() (\begin{DoxyParamCaption}\item[{std::\+size\+\_\+t}]{n}{, }\item[{std::\+size\+\_\+t}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns a non-\/const reference to the element at the given indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The row of the target element. \\
+\hline
+{\em m} & The column of the target element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/const reference to the element at the given indices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If n \texorpdfstring{$<$}{<} 0 or n \texorpdfstring{$>$}{>}= N or m \texorpdfstring{$<$}{<} 0 or m \texorpdfstring{$>$}{>}= M. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classutil_1_1math_1_1_matrix_a7305a054bf00be5e479c5bab7a2d499b}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a7305a054bf00be5e479c5bab7a2d499b} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+const T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator() (\begin{DoxyParamCaption}\item[{std::\+size\+\_\+t}]{n}{, }\item[{std::\+size\+\_\+t}]{m}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns a const reference to the element at the given indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The row of the target element. \\
+\hline
+{\em m} & The column of the target element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A const reference to the element at the given indices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If n \texorpdfstring{$<$}{<} 0 or n \texorpdfstring{$>$}{>}= N or m \texorpdfstring{$<$}{<} 0 or m \texorpdfstring{$>$}{>}= M. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classutil_1_1math_1_1_matrix_ab9bcc695ccccfa063c12f7788107d555}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_ab9bcc695ccccfa063c12f7788107d555} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+template$<$std::\+size\+\_\+t P$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, P $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, M, P $>$ \&}]{multiplicand}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the product of two matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The right hand matrix to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The product of both matrices. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a311c72de80646e362afc7865deceb7c3}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a311c72de80646e362afc7865deceb7c3} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const T \&}]{multiplicand}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the scalar product by a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The scalar to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scalar product by the given multiplicand. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a3b8e619ce5893d06d50445d780094e97}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a3b8e619ce5893d06d50445d780094e97} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{Vector}}$<$ T, M $>$ \&}]{multiplicand}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the product of a matrix and a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The right hand vector to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The product of the matrix and the vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a3e444cc87dfd4e65df2580162602f3ec}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a3e444cc87dfd4e65df2580162602f3ec} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{T \&}]{multiplicand}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the scalar product by a given scalar and assigns the result to the left-\/hand matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The scalar to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_abb1da3ba71f04798a15691c98a0e3f58}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_abb1da3ba71f04798a15691c98a0e3f58} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator+ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&}]{addend}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the sum of two matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addend} & The right-\/hand matrix to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of both matrices. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a2d4199f0854b7277ad99939edb56e3ec}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a2d4199f0854b7277ad99939edb56e3ec} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator+= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&}]{addend}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the sum of two matrices and assigns the result to the left-\/hand matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addend} & The right-\/hand matrix to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a278573e3201e2656f2b97166b42242fe}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a278573e3201e2656f2b97166b42242fe} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator-\/ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&}]{subtrahend}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the difference of two matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subtrahend} & The right-\/hand matrix to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The difference of both matrices. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a727f7c1c76be6b7cebd7288b421d6612}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a727f7c1c76be6b7cebd7288b421d6612} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator-\/= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \&}]{subtrahend}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the difference of two matrices and assigns the result to the left-\/hand matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subtrahend} & The right-\/hand matrix to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a8a4dc60928bfa6b1bcd8795ed13f14c4}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a8a4dc60928bfa6b1bcd8795ed13f14c4} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator/ (\begin{DoxyParamCaption}\item[{T \&}]{divisor}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the scalar quotient from a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The scalar to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scalar quotient from the given divisor. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_a65176c4de4fc99ebcf4b4236d6471cca}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a65176c4de4fc99ebcf4b4236d6471cca} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, N, M $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator/\+= (\begin{DoxyParamCaption}\item[{T \&}]{divisor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the scalar quotient from a given scalar and assigns the result to the left-\/hand matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em divisor} & The scalar to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand matrix. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_matrix_aae5d34777431b7c6a8c08f6aaa030b53}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_aae5d34777431b7c6a8c08f6aaa030b53} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const std::\+size\+\_\+t}]{i}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the element at the provided linear index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the target element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/const reference to the element at the given index. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If i \texorpdfstring{$<$}{<} 0 or i \texorpdfstring{$>$}{>}= M \texorpdfstring{$\ast$}{*} N. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classutil_1_1math_1_1_matrix_a3b4231688bbe6783f83d8eecda3ad7cc}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_a3b4231688bbe6783f83d8eecda3ad7cc} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+const T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const std::\+size\+\_\+t}]{i}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the element at the provided linear index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the target element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A const reference to the element at the given index. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If i \texorpdfstring{$<$}{<} 0 or i \texorpdfstring{$>$}{>}= M \texorpdfstring{$\ast$}{*} N. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classutil_1_1math_1_1_matrix_aeefe40bf9190ee62d1ee99c5ac2bdab8}\index{util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!util::math::Matrix$<$ T, N, M $>$@{util::math::Matrix$<$ T, N, M $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_matrix_aeefe40bf9190ee62d1ee99c5ac2bdab8} 
+template$<$typename T, std::\+size\+\_\+t N, std::\+size\+\_\+t M$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_matrix_a44378ec7553be207cff10c5eba496e04}{Matrix}}$<$ T, M, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_matrix}{util::\+math::\+\+Matrix}}$<$ T, N, M $>$::\+\+Transpose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the transpose of the given matrix. 
+
+\begin{DoxyReturn}{Returns}
+The transpose of the given matrix. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+utility/\+math/Matrix.\+h\end{DoxyCompactItemize}

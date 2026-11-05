@@ -1,0 +1,30 @@
+\doxysection{Heuristic\+Rules.\+cpp}
+\hypertarget{_heuristic_rules_8cpp_source}{}\label{_heuristic_rules_8cpp_source}\index{cpp\_code/gnc/HeuristicRules.cpp@{cpp\_code/gnc/HeuristicRules.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ [2026]\ Purdue\ National\ Security\ and\ Defense\ Society}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICRULES\_H\_}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICRULES\_H\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}utility/datatypes/TargetPackage.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }gnc::heuristics\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{double}\ target\_distance(\textcolor{keyword}{const}\ util::datatypes::TargetPackage\&\ target)\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{return}\ target.absolute\_position\_xyz.\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a774fec16ae5cee82a539699b9af879e2}{Magnitude}}();}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{double}\ target\_velocity(\textcolor{keyword}{const}\ util::datatypes::TargetPackage\&\ target)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{return}\ target.absolute\_velocity\_xyz.\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a774fec16ae5cee82a539699b9af879e2}{Magnitude}}();}
+\DoxyCodeLine{00016\ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{double}\ target\_confidence(\textcolor{keyword}{const}\ util::datatypes::TargetPackage\&\ target)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{return}\ target.target\_confidence;}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \}\ \ \textcolor{comment}{//\ namespace\ gnc::heuristics}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ NSDS\_COUNTER\_UAS\_CPP\_CODE\_GNC\_HEURISTICRULES\_H\_}}
+
+\end{DoxyCode}

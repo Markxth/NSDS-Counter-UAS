@@ -1,0 +1,373 @@
+\doxysection{util::math::Vector\texorpdfstring{$<$}{<} T, N \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classutil_1_1math_1_1_vector}{}\label{classutil_1_1math_1_1_vector}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+
+
+Organizes generic data and exposes common vector operations.  
+
+
+
+
+{\ttfamily \+\#include $<$Vector.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}\label{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36} 
+{\bfseries Vector} ()
+\begin{DoxyCompactList}\small\item\em Constructs a vector of the given size where every element contains the default value for the given datatype. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8022ef18ea57e598529120b20057dd72}{Vector}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Constructs a vector of the given size where every element contains the provided value. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a60ff6593e52291356d61e60db288a584}{Vector}} (const std::\+initializer\+\_\+list$<$ T $>$ values)
+\begin{DoxyCompactList}\small\item\em Constructs a vector of the given size from the provided elements. \end{DoxyCompactList}\item 
+T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a6d45b1a6306df659bff19e83b7f62cc1}{operator\+[$\,$]}} (const std::\+size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Returns a non-\/const reference to the element at the given index. \end{DoxyCompactList}\item 
+const T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a21dc23d9efabdf209586e428d2126467}{operator\+[$\,$]}} (const std::\+size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Returns a const reference to the element at the given index. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_aad16c0c0dc68bb957c14d0b0658e00d7}{operator+}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&addend) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the sum of two vectors. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a50f30670f9e583df9b4ab3b15ded1541}{operator-\/}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&subtrahend) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the difference of two vectors. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a9d03614c55d6b1dcd902d7c759c38cbc}{operator\texorpdfstring{$\ast$}{*}}} (const T multiplicand) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the scalar product by a given scalar. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a46226982e6220f9e53c872608bd6ad2d}{operator/}} (const T divisor) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the scalar quotient from a given scalar. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a202a5abfe01b94165585e4dd63f45c93}{operator+=}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&addend) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the sum of two vectors and assigns the result to the left-\/hand vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a06ecd1c769fa5e681adfaba2fd926e1b}{operator-\/=}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&subtrahend) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the difference of two vectors and assigns the result to the left-\/hand vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a1a3baad7f6e9c12c86b163e5814dcd56}{operator\texorpdfstring{$\ast$}{*}=}} (const T multiplicand) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the scalar product by a given scalar and assigns the result to the left-\/hand vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_ac6b2895372dcc6bb757bf0f2d87b9cd3}{operator/\+=}} (const T divisor) noexcept
+\begin{DoxyCompactList}\small\item\em Computes the scalar quotient from a given scalar. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_ab68c2bb186acb7cf27cdabb5d6c02c26}{Dot}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&target) const noexcept
+\begin{DoxyCompactList}\small\item\em Computes the dot product of two vectors. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, 3 $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a25c7b0bf53b0c062601b73c3022f7cc0}{Cross}} (const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, 3 $>$ \&other) const noexcept
+\begin{DoxyCompactList}\small\item\em Computes the cross product of two three element vectors. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a774fec16ae5cee82a539699b9af879e2}{Magnitude}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Computes the magnitude of the vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a0045d1f2c476920af3c68beae9ea5220}{Normalized}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Computes the normalized version of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, std::\+size\+\_\+t N$>$\newline
+class util::\+math::\+\+Vector$<$ T, N $>$}
+Organizes generic data and exposes common vector operations. 
+
+\label{classutil_1_1math_1_1_vector_doc-constructors}
+\Hypertarget{classutil_1_1math_1_1_vector_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classutil_1_1math_1_1_vector_a8022ef18ea57e598529120b20057dd72}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a8022ef18ea57e598529120b20057dd72} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+\+Vector (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a vector of the given size where every element contains the provided value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value for each element. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classutil_1_1math_1_1_vector_a60ff6593e52291356d61e60db288a584}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a60ff6593e52291356d61e60db288a584} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+\+Vector (\begin{DoxyParamCaption}\item[{const std::\+initializer\+\_\+list$<$ T $>$}]{values}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a vector of the given size from the provided elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & The values to initialize the vector with. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If values.\+size() != N. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{classutil_1_1math_1_1_vector_doc-func-members}
+\Hypertarget{classutil_1_1math_1_1_vector_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classutil_1_1math_1_1_vector_a25c7b0bf53b0c062601b73c3022f7cc0}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!Cross@{Cross}}
+\index{Cross@{Cross}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Cross()}{Cross()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a25c7b0bf53b0c062601b73c3022f7cc0} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \newline
+requires (N == 3)\\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, 3 $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+\+Cross (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, 3 $>$ \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Computes the cross product of two three element vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The right-\/hand vector to compute the cross product with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector orthogonal to the two given vectors. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_ab68c2bb186acb7cf27cdabb5d6c02c26}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!Dot@{Dot}}
+\index{Dot@{Dot}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_ab68c2bb186acb7cf27cdabb5d6c02c26} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+T \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+\+Dot (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&}]{target}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the dot product of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The right-\/hand vector to compute the inner product with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scalar result of the inner product of both vectors. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a774fec16ae5cee82a539699b9af879e2}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!Magnitude@{Magnitude}}
+\index{Magnitude@{Magnitude}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Magnitude()}{Magnitude()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a774fec16ae5cee82a539699b9af879e2} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+T \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+\+Magnitude (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the magnitude of the vector. 
+
+\begin{DoxyReturn}{Returns}
+The scalar magnitude of the vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a0045d1f2c476920af3c68beae9ea5220}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!Normalized@{Normalized}}
+\index{Normalized@{Normalized}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Normalized()}{Normalized()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a0045d1f2c476920af3c68beae9ea5220} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+\+Normalized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the normalized version of the vector. 
+
+\begin{DoxyReturn}{Returns}
+The normalized vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a9d03614c55d6b1dcd902d7c759c38cbc}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a9d03614c55d6b1dcd902d7c759c38cbc} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const T}]{multiplicand}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the scalar product by a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The scalar to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scalar product by the given multiplicand. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a1a3baad7f6e9c12c86b163e5814dcd56}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a1a3baad7f6e9c12c86b163e5814dcd56} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const T}]{multiplicand}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the scalar product by a given scalar and assigns the result to the left-\/hand vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em multiplicand} & The scalar to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_aad16c0c0dc68bb957c14d0b0658e00d7}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_aad16c0c0dc68bb957c14d0b0658e00d7} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator+ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&}]{addend}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the sum of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addend} & The right-\/hand vector to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of both vectors. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a202a5abfe01b94165585e4dd63f45c93}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a202a5abfe01b94165585e4dd63f45c93} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator+= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&}]{addend}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the sum of two vectors and assigns the result to the left-\/hand vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addend} & The right-\/hand vector to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a50f30670f9e583df9b4ab3b15ded1541}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a50f30670f9e583df9b4ab3b15ded1541} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator-\/ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&}]{subtrahend}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the difference of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subtrahend} & The right-\/hand vector to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The difference of both vectors. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a06ecd1c769fa5e681adfaba2fd926e1b}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a06ecd1c769fa5e681adfaba2fd926e1b} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator-\/= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \&}]{subtrahend}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the difference of two vectors and assigns the result to the left-\/hand vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subtrahend} & The right-\/hand vector to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a46226982e6220f9e53c872608bd6ad2d}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a46226982e6220f9e53c872608bd6ad2d} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator/ (\begin{DoxyParamCaption}\item[{const T}]{divisor}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the scalar quotient from a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em divisor} & The scalar to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scalar quotient from a given divisor. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_ac6b2895372dcc6bb757bf0f2d87b9cd3}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_ac6b2895372dcc6bb757bf0f2d87b9cd3} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+\doxymbox{\hyperlink{classutil_1_1math_1_1_vector_a8fd60d6abe3b5f85635821ecf1cd1d36}{Vector}}$<$ T, N $>$ \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator/\+= (\begin{DoxyParamCaption}\item[{const T}]{divisor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [noexcept]}}
+
+
+
+Computes the scalar quotient from a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em divisor} & The scalar to divide by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the left-\/hand vector. 
+\end{DoxyReturn}
+\Hypertarget{classutil_1_1math_1_1_vector_a6d45b1a6306df659bff19e83b7f62cc1}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a6d45b1a6306df659bff19e83b7f62cc1} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const std::\+size\+\_\+t}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns a non-\/const reference to the element at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The element index to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/const reference to the element at the given index. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If index is \texorpdfstring{$<$}{<} 0 or \texorpdfstring{$>$}{>}= N. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classutil_1_1math_1_1_vector_a21dc23d9efabdf209586e428d2126467}\index{util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!util::math::Vector$<$ T, N $>$@{util::math::Vector$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classutil_1_1math_1_1_vector_a21dc23d9efabdf209586e428d2126467} 
+template$<$typename T, std::\+size\+\_\+t N$>$ \\
+const T \& \doxymbox{\hyperlink{classutil_1_1math_1_1_vector}{util::\+math::\+\+Vector}}$<$ T, N $>$::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const std::\+size\+\_\+t}]{index}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns a const reference to the element at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The element index to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A const reference to the element at the given index. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & If index is \texorpdfstring{$<$}{<} 0 or \texorpdfstring{$>$}{>}= N. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+cpp\+\_\+code/\+utility/\+math/Vector.\+h\end{DoxyCompactItemize}

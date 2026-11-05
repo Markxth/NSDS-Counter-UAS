@@ -1,0 +1,43 @@
+\doxysection{cpp\+\_\+code/\+gnc/\+documentation Directory Reference}
+\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae}{}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae}\index{cpp\_code/gnc/documentation Directory Reference@{cpp\_code/gnc/documentation Directory Reference}}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md0}{}\doxysubsection{\texorpdfstring{Guidance, Navigation, and Controls}{Guidance, Navigation, and Controls}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md0}
+\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md1}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md1}
+The Guidance, Navigation, and Controls system is a middleware system that processes target packages from the fusion system, and issues commands to the pan-\/tilt system to align the turret with a determined target vector. GNC is split into four primary components:
+\begin{DoxyItemize}
+\item GNCEngine
+\item Guidance\+Engine
+\item Navigation\+Engine
+\item Controls\+Engine
+\end{DoxyItemize}
+
+GNCEngine is the primary orchestrator for GNC, and owns the other engines. GNCEngine iteracts with earlier systems by receiving and configuring target packages, before dispatching further processing calls in the other engines.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md2}{}\doxysubsection{\texorpdfstring{Guidance}{Guidance}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md2}
+The Guidance\+Engine is responsible for processing the target packages configured by GNCEngine, and determining where the turret should aim.
+
+The Gudiance\+Engine operates in several key phases:
+\begin{DoxyItemize}
+\item Target Statevector Assimilation using Kalman filters.
+\item Optimal Target Selection.
+\item Ballistic Effects Simulation.
+\item Target Statevector Output.
+\end{DoxyItemize}\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Target Statevector Assimilation}{Target Statevector Assimilation}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md3}
+In any mechanical or electronic system there will be measurement uncertainty. To minimize the effects of measurement uncertainty, the Guidance\+Engine uses Kalman filters to predict target locations. Because predicted locations may differ from measured locations, and both have uncertainty associated with them, the Kalman Filter approach balances both locations to determine the most likely position of the target.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Optimal Target Selection}{Optimal Target Selection}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md4}
+When a list of targets is available to the Guidance\+Engine, a decision must be made for which target to align to. The optimal target selection phase looks at several factors such as the turrets current orientation, a prospective targets\textquotesingle{} position, target confidence, available elimination methods, and target size (Class 1 vs Class 2 UAS, etc.). Optimal Target Selection requires a careful balance of its input properties to ensure that targets are eliminated in an effective, efficient manner, and that chosen targets actually enemies.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Ballistic Effects Simulation}{Ballistic Effects Simulation}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md5}
+Kinetic elimination methods, at any engagement distance, will experience interference from the environment. When a target has been chosen, the Guidance\+Engine must account for what interference the kinetic elimination method will experience, based on properties of the elimination method. These properties may include things such as muzzle velocity, drag coefficients, lead angles, and gravitational effects.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Target Statevector Output}{Target Statevector Output}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md6}
+Once a target has been chosen, its location has been processed, and a ballistics offset has been calculated, the Guidance\+Engine returns the target statevector to the GNCEngine for processing by other subsystems.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md7}{}\doxysubsection{\texorpdfstring{Navigation}{Navigation}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md7}
+The Navigation\+Engine is responsible for determining the current statevector of the turret.
+
+NOTE: this subsytem is still being researched.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md8}{}\doxysubsection{\texorpdfstring{Controls}{Controls}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md8}
+The Controls\+Engine is responsible for dispatching commands to the turret hardware to align the turret with the target statevector. To determine the necessary commands, the Controls\+Engine receives the target statevector and the current statevector, and uses a PID loop to determine an errror-\/corrected amount of rotation to apply. The Controls\+Engine operatres in three key phases:
+\begin{DoxyItemize}
+\item Rotation Calculation.
+\item Error Correction.
+\item Command Issuance.
+\end{DoxyItemize}\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{Rotation Calculation}{Rotation Calculation}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md9}
+Using the difference between the target statevector and the current statevector, the Controls\+Engine calculates the necessary rotation along each of the principle axes.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Error Correction}{Error Correction}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md10}
+To account for small errors in the pan-\/tilt system\textquotesingle{}s rotation, a Proportional-\/\+Integral-\/\+Derivative loop is used to have error from previous commands inform the calculated rotation for future commands. As the system runs error correction becomes increasingly accurate as the exact error of the hardware is observed.\hypertarget{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Command Issuance}{Command Issuance}}\label{dir_0d2f3e048090ec2d73f8a3175eeda8ae_autotoc_md11}
+Once error-\/corrected rotations have been calcualated, the Controls\+Engine generates commands for the pan-\/tilt hardware and issues them via serial bus.
+
+Commands and issuance techniques are specific to the hardware in use. The currently selected hardware is the Directed Perception PTU-\/46-\/17.\+5 Pan-\/\+Tilt Unit, and commands are issued via serial bus connection. Different hardware backends will require different command issuance code. 
