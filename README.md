@@ -1,4 +1,4 @@
-# Purdue National Security and Defense Society: Counter Unmanned Aerial Systems - MOVED TO A DIFFERENT DIRECTORY
+# Purdue National Security and Defense Society: Counter Unmanned Aerial Systems - MOVED TO A DIFFERENT PROJECT
 
 Software and firmware for the Purdue NSDS C-UAS platform.
 
